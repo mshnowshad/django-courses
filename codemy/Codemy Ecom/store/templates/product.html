@@ -4,79 +4,98 @@
 
 {%block body%}
 
+<!-- Header-->
+<header class="bg-success py-2">
+    <div class="container px-4 px-lg-4 my-4">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">{{product.name}}</h1>
+            <br />
 
-
-<br />
-<br />
-
-
-
-
-
-
-<div class="container">
-    <div class="card mb-6">
-
-        <div class="row g-0">
-            <div class="col-md-4">
-
-                <img src="{{ product.image.url }}" class="img-fluid rounded-start">
+            <!-- === typeit===    -->
+            <div class="lead fw-normal text-white-50 mb-0">
+                <!--  <p id="multipleStrings" style="font-family: cursive;">"Unveiling Our Narrative. Register for a user account!"</p>
+          -->
             </div>
-            <div class="col-md-8">
-                <div class="card-body" style="margin-left:2rem;">
-                    <center>
-                        <h2 class="card-title">{{ product.name }}</h2>
-                        <br />
-                        <p class="card-text justified" align="justify">{{ product.description | slice:':637'}}..</p>
-
-                        {% if product.is_sale %}
-                        <div class="badge bg-warning text-dark position-absolute" style="top: 0.5rem; left: 0.5rem"><h7>Sale Now!</h7></div>
-
-                        <h4>
+            </div>
+        </div>
+    </header>
 
 
-                            <strike>
-                                ${{product.price}}
-                            </strike>
-
-                            &nbsp;<!-- this is space between two price-->
-                            ${{product.sale_price}}
-                        </h4>
-
-                        {%else%}
-
-                        <h4>
-                            ${{product.price}}
-                        </h4>
-
-                        {% endif %}
-
-                        <br />
-                        <div class="row justify-content-center">
-                            <div class="col-md-2">Quantity:</div>
-                            <div class="col-md-2">
-                                <select id="qty-cart" class="form-select form-select-sm">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+    <br />
 
 
-                                </select>
-                            </div>
-                        </div>
-
-                        <br />
-                        <br />
 
 
-                        <a href="{% url 'home' %}"><button class="btn btn-outline-success">Back Home</button></a>
+
+
+
+    <div class="container">
+        <div class="card mb-6">
+
+            <div class="row g-0">
+                <div class="col-md-4">
+
+                    <img src="{{ product.image.url }}" class="img-fluid rounded-start">
+                    <div style="margin-top:2rem;margin-left:3rem;">
+                        <a href="{% url 'home' %}"><button class="btn btn-outline-success" style="margin-left: 2rem; ">Back Home</button></a>
                         <button id="add-cart" value="{{product.id}}" type="button" style="margin-left:5px;" class="btn btn-outline-dark">Add to Card</button>
+                    </div>
+                    
+                    
 
-                        <p class="card-text" style="margin-top:10px;"><small class="text-body-secondary">updated on {{ product.date }}</small></p>
-                    </center>
                 </div>
+                <div class="col-md-8">
+                    <div class="card-body" style="margin-left:1.2rem;">
+                        <center>
+                            <!--<h2 class="card-title">{{ product.name }}</h2>-->
+                <br />
+                <p class="card-text justified" align="justify">{{ product.description }}..</p>
+
+                {% if product.is_sale %}
+                <div class="badge bg-warning text-dark position-absolute" style="top: 0.5rem; left: 0.5rem"><h7>Sale Now!</h7></div>
+
+                <h4>
+
+
+                    <strike>
+                        ${{product.price}}
+                    </strike>
+
+                    &nbsp;<!-- this is space between two price-->
+                    ${{product.sale_price}}
+                </h4>
+
+                {%else%}
+
+                <h4>
+                    ${{product.price}}
+                </h4>
+
+                {% endif %}
+
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-md-2">Quantity:</div>
+                    <div class="col-md-2">
+                        <select id="qty-cart" class="form-select form-select-sm">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+
+
+                        </select>
+                    </div>
+                </div>
+
+                <br />
+                <br />
+
+
+                
+                </center>
+            </div>
             </div>
         </div>
     </div>
@@ -119,7 +138,7 @@
 
 
 
-   
+
 
 <script>
     //Shopping Cart Setup - Django Wednesdays ECommerce 11

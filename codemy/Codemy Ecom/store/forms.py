@@ -1,9 +1,37 @@
 ﻿
 
 from django.contrib.auth.models import User  #User মডেল, যা ব্যবহারকারীদের তথ্য সংরক্ষণ করে।
-from django.contrib.auth.forms import UserCreationForm  #UserCreationForm, যা নতুন ব্যবহারকারীদের সাইন আপ করার ফর্ম তৈরিতে সাহায্য করে।
+from django.contrib.auth.forms import UserCreationForm,UserChangeForm  #UserCreationForm, যা নতুন ব্যবহারকারীদের সাইন আপ করার ফর্ম তৈরিতে সাহায্য করে।
 from django import forms  #forms মডিউল, যা ফর্ম তৈরির জন্য সাধারণ সরঞ্জাম সরবরাহ করে।
 
+
+class UpdateUserForm(UserChangeForm):
+	password = None
+	#email: ব্যবহারকারীর ইমেল ঠিকানা সংগ্রহের জন্য।
+	email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}))
+	
+	#first_name: ব্যবহারকারীর প্রথম নাম সংগ্রহের জন্য।
+	first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'First Name'}))
+	
+	#last_name: ব্যবহারকারীর শেষ নাম সংগ্রহের জন্য।
+	last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Last Name'}))
+
+
+	class Meta: # ফর্মের মেটা তথ্য নির্ধারণ:
+		
+		model = User #model: এটি নির্দিষ্ট করে যে ফর্মটি User মডেলের সাথে সংযুক্ত।
+		
+		#fields: এটি নির্দিষ্ট করে যে ফর্মে কোন কোন ক্ষেত্র অন্তর্ভুক্ত থাকবে।
+		fields = ('username', 'first_name', 'last_name', 'email',)
+
+	def __init__(self, *args, **kwargs):
+		super(UpdateUserForm, self).__init__(*args, **kwargs)
+
+		### এই অংশ ফর্মের ক্ষেত্রগুলোর চেহারা (interface) এবং (style) আচরণ কাস্টমাইজ করে। উদাহরণস্বরূপ, এটি লেবেলগুলি সরিয়ে ফেলে, প্লেসহোল্ডার যোগ করে এবং সহায়ক পাঠ্য সরবরাহ করে।
+		self.fields['username'].widget.attrs['class'] = 'form-control'
+		self.fields['username'].widget.attrs['placeholder'] = 'User Name'
+		self.fields['username'].label = ''
+		self.fields['username'].help_text = ''
 
 
 
