@@ -28,6 +28,7 @@
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            {% if products %}
             {%for product in products%}
 
             <!-- =============> sales! <=========== -->
@@ -109,10 +110,14 @@
 
             {%endif%}
             {%endfor%}
-
-
-
+            {% else %}
         </div>
+        <center>
+            <h1 style="font-family: Georgia, serif; ">This Category products is not available!</h1><br />
+            <h5>Choice another Category , Happy Shopping!</h5>
+
+        </center>
+        {% endif %}
     </div>
 </section>
 
