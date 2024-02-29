@@ -1,0 +1,30 @@
+========================== > Designing The Homepage Of Our E-Commerce Website | Python Django Tutorials In Hindi #26< ===================================
+
+
+
+
+
+
+
+
+
+
+
+
+# i am not fixed prev and next icon slide
+
+
+
+
+
+
+
+added many product sample card
+
+
+
+
+
+
+
+

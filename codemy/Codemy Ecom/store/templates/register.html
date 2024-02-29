@@ -1,0 +1,88 @@
+{% extends 'base.html'%}
+
+
+
+
+{%block body%}
+
+
+
+
+
+
+
+<!-- Header-->
+<header class="bg-success py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Register Now</h1>
+            <br />
+
+            <!-- === typeit===    -->
+            <div class="lead fw-normal text-white-50 mb-0">
+                <p id="multipleStrings" style="font-family: cursive;">"Unveiling Our Narrative. Register for a user account!"</p>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <br />
+            <form method="POST" action="{% url 'register' %}">
+
+                {% csrf_token %}
+
+                {{ form.as_p}}
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+
+                    <button class="btn btn-outline-success" type="submit" style="font-family: cursive;">Register now</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- some <br/> for space -->
+<br />
+<br />
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{%endblock body%}
+
+
+
+
+
+
+
+
+

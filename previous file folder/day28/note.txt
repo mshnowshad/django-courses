@@ -1,0 +1,15 @@
+========================== > Adding Media Directory In Django | Python Django Tutorials In Hindi #28 <==========================
+
+
+
+
+  > admin panel a product images add korar por jeno deka jay image ta...thai "settings.py" and 'urls.py' file a kisu module add kora oise...
+
+
+
+>>>> ei images gula "EcWeb" folder er 'media' name er folder a images gula add upload hoye thakbe 
+
+
+
+
+

@@ -1,0 +1,26 @@
+
+
+
+
+<p id="multipleStrings">  Wellcome to the Typeit , Happy New Year.</p>
+
+
+
+
+
+
+
+
+<!-- Typeit JS-->
+
+
+        <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+
+        <script>
+            new TypeIt("#multipleStrings", {
+                //strings: [],
+                speed: 80,
+                waitUntilVisible: true,
+                loop: true, // Loop the entire sequence
+            }).pause(6000).go();
+        </script>

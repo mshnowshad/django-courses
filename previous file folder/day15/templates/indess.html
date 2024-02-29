@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- Bootstrap CSS - Use the LTR version -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+        <title>textUtils</title>
+    </head>
+<body>
+  <div class="container">
+
+	<nav class="navbar navbar-expand-lg bg-body-tertiary  bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <form action="/" method="get"><button class="btn btn-outline-danger" style="margin-right: 15px;">TextUtils.in</button></form>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <form action="/" method="get"><button class="btn btn-outline-primary"style="margin-right: 15px;" >Home</button></form>
+              </li>
+              <li class="nav-item">
+                <form action="/about" method="get"><button class="btn btn-outline-info" style="margin-right: 15px;">About</button></form>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li> -->
+             <!--  <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+            <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+          </div>
+        </div>
+      </nav>
+      
+      
+
+
+
+</div>
+
+
+      <center>
+
+
+
+
+
+    <h1>Wellcome to TextUtils.</h1><br> <h2></h2> 
+
+</center>
+
+
+
+<div class="container">
+
+<!--============================================> this is 'form' <============================================-->
+
+
+    <!-- 
+        আপনি যখন ফর্ম জমা দেন, তখন টেক্সট বক্সের বিষয়বস্তু এবং চেকবক্সের অবস্থা URL-এর সাথে যুক্ত করা হয় এবং '/analyze' পৃষ্ঠায় পাঠানো হয়।
+        '/analyze' পৃষ্ঠায় কোডটি তখন এই তথ্যটি পাঠ্য বিশ্লেষণ করতে ব্যবহার করবে।
+    -->
+<form action='/analyze12' method='get'>   <!-- ## ei jaygay 'about' name er page o niye jabe 'form' er txt lhike 'button' a submit korle
+    
+                                                   > action='/analyze': এটি বলে যে ফর্মটি জমা দেওয়া হলে, তথ্যটি '/analyze' নামক ওয়েবসাইটের একটি পৃষ্ঠায় পাঠানো হবে। এই পৃষ্ঠায় পাঠ্য বিশ্লেষণের কোড থাকবে।                     
+                                                          >    method='get': এটি নির্ধারণ করে যে তথ্যগুলি URL-এর মাধ্যমে পাঠানো হবে।    -->
+    
+<h5> Enter the text for analyze text:</h5>
+    
+    <textarea name='text' style='margin: 0px; width: 100%;' rows='5'></textarea> <br>   <!-- এই লাইনটি automatic fix how but 'rows' onu jayii  
+
+    <input type='checkbox' name='removepunc'> Removepunc <!-- ei jaygay akta 'checkbox' name er akta gor banani oise 
+                                                             > type='checkbox': এটি নির্ধারণ করে যে এটি একটি চেকবক্স হবে।       
+                                                                    > name='removepunc': এই বৈশিষ্ট্যটি ফর্ম ডেটাতে চেকবক্সের অবস্থা সনাক্ত করতে ব্যবহৃত হয়--> 
+    
+     <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" name="removepunc"> Removepunc </div>                                                   
+
+   
+     <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" name="fullcaps"> UPPERCASE </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" name="newlineremover"> NewLineRemover </div>
+    
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" name="extraspaceremover"> ExtraSpace Remover</div> 
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" name="charcount"> Char Count</div> 
+    
+    <br>
+    <br>
+
+
+
+
+
+    
+    <button class="btn btn-outline-success" type="submit">Analyze text</button>   <!-- <button type='submit'> Done analyazer </button>: এই লাইনটি একটি বোতাম তৈরি করে যা ব্যবহারকারী ফর্ম জমা দিতে ক্লিক করতে পারেন।-->
+</form>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- Keep the same JavaScript imports as they are -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

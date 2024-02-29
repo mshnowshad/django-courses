@@ -1,0 +1,51 @@
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
+
+
+
+## whitenoise setup
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+]
+
+
+$  pip install whitenoise 
+
+
+
+
+
++++++++++++++++++++++  media set up =================== 
+
+
+
+#settings.py
+
+import os
+
+MEDIA_URL = '/media/'  
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
+
+
+# urls.py
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+
+urlpatterns = [
+    path('',include('home.urls')),
+    path('admin/', admin.site.urls)
+ 
+]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

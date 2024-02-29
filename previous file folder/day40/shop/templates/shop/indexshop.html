@@ -1,0 +1,563 @@
+
+{% extends "shop/basic.html" %} 
+
+
+{%block title%} E-com.in {%endblock%}
+
+{% block css %} 
+
+
+ <style>
+      .body{
+    background-color: black;
+  }
+      
+      .col-md-3 {
+          display: inline-block;
+          margin-left: -4px;
+      }
+
+      .col-md-3 img{
+          width: 100%;
+          height: auto;
+      }
+
+      body .carousel-control-indicator li {
+          background-color: blue;
+      }
+
+      body .carousel-control-prev-icon,
+      body .carousel-control-next-icon{
+
+        color: darkblue;
+
+      }
+
+
+      
+
+      body .no-padding {
+          padding-left: 0;
+          padding-right: 0;
+      }
+
+     
+      
+
+      .carousel-indicators .active{
+      background-color: blue;
+      }
+      
+
+
+
+
+
+
+
+  </style>
+{%endblock%}
+
+
+
+
+{%block navber%} 
+
+<button class="btn btn-primary btn-sm" type="button" disabled>
+  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  <span role="status">indexing...</span>
+</button>
+
+
+
+
+
+
+
+{%endblock%}
+
+{%block body%}
+
+
+
+
+
+
+
+
+
+
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+  <strong>Welcome to the E-commarce Home of E-com place !</strong> see Home of E-com Us , Good day to You!.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+
+
+
+
+<!-- 
+<center>
+  <h2> Welcome to Our Home of E-com Page!</h2>
+  <br>
+
+</center>
+ -->
+
+
+
+
+
+
+
+
+
+<!-- ================================================= causoul ==============================================================-->
+{% comment %} 
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+
+  <!--==================================== slideshow starts here============== -->
+
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    {% load static %}
+  
+    <!-- Slides -->
+    <div class="carousel-inner">
+  
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row">
+  
+            <!-- Your Cards for Slide 1 -->
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Add more col-xs-3 divs for other cards in the same slide -->
+             <!-- Your Cards for Slide 1 -->
+             <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+              <!-- Your Cards for Slide 1 -->
+              <div class="col-xs-3 col-sm-3 col-md-3">
+                <!-- Your Card Content -->
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Your Cards for Slide 1 -->
+              <div class="col-xs-3 col-sm-3 col-md-3">
+                <!-- Your Card Content -->
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+
+  
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row">
+  
+            <!-- Your Cards for Slide 2 -->
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Add more col-xs-3 divs for other cards in the same slide -->
+             <!-- Your Cards for Slide 2 -->
+             <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+             <!-- Your Cards for Slide 2 -->
+             <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+             <!-- Your Cards for Slide 2 -->
+             <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+  
+
+  
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row">
+  
+            <!-- Your Cards for Slide 3 -->
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Add more col-xs-3 divs for other cards in the same slide -->
+
+
+            <!-- Your Cards for Slide 3 -->
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Your Cards for Slide 3 -->
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Your Cards for Slide 3 -->
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Your Cards for Slide 3 -->
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <!-- Your Card Content -->
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="card-link">Card link</a>
+                  <a href="#" class="card-link">Another link</a>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Previous and Next Controls -->
+    <a class="carousel-control-prev" href="#demo" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+  
+    <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>  
+    </a>
+  
+  </div>
+  
+
+ {% endcomment %}
+{% comment %} =================================> carousel<======================== {% endcomment %}
+
+<div class="container">
+  {% load static %}
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade ">
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        
+          <div class="carousel-item active">
+              <img class="bd-placeholder-img" src="{% static "shop/s2.jpeg" %}"  class="img-fluid mx-auto">  <!-- this is the 'sample'-->  
+              <!-- <img class="bd-placeholder-img" src="1.jpg" -->
+
+              {% comment %} src="https://source.unsplash.com/2600x600/?black,shoes"  {% endcomment %}
+
+
+
+              <div class="carousel-caption d-none d-md-block">
+                  <h3>Dr. Christopher Dayagdag</h3>
+                  <p>"A website without visitors is like a ship lost in the horizon." </p>
+                 <!--  <button type="button" class="btn btn-outline-success">Webdevelopment</button>
+                  <button type="button" class="btn btn-outline-success">Machine Learning</button>
+                  <button type="button" class="btn btn-outline-success">Artificial Inteligent</button> -->
+
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="bd-placeholder-img" src="{% static "shop/s1.jpeg" %}" class="img-fluid mx-auto">
+              <div class="carousel-caption d-none d-md-block">
+                  <h3>Bill Gates</h3>
+                  <p>"The Internet is becoming the town square for the global village of tomorrow."</p>
+                  <!-- <button type="button" class="btn btn-outline-success">Webdevelopment</button>
+                  <button type="button" class="btn btn-outline-success">Machine Learning</button>
+                  <button type="button" class="btn btn-outline-success">Artificial Inteligent</button> -->
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img class="bd-placeholder-img" src="{% static "shop/s3.jpeg" %}" class="img-fluid mx-auto">
+              <div class="carousel-caption d-none d-md-block">
+                  <h3>Mike Kus</h3>
+                  <p>"The design process should start with people. It should start with understanding why the site or
+                      the app or whatever you are designing is needed and for whom." </p>
+                  <!-- <button type="button" class="btn btn-outline-success">Webdevelopment</button>
+                  <button type="button" class="btn btn-outline-success">Machine Learning</button>
+                  <button type="button" class="btn btn-outline-success">Artificial Inteligent</button> -->
+              </div>
+          </div>
+        </div>
+    
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+</div>
+
+
+
+
+<br>
+
+
+{% comment %} ===========================> products showing <=========================== {% endcomment %}
+
+
+<div class="container">
+
+
+  <div class="row">
+    {% for product in products %}
+        <div class="col-md-3">
+            <div class="card" style="width:18rem">
+              <img src="{{ product.image.url }}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.category }}</h5>
+                    <p class="card-text">{{ product.product_name }}</p>
+                    <p class="card-text">BD.{{ product.price }}</p>
+                    <a href="#" class="card-link"><button type="button" class="btn btn-info btn-sm " style="margin-right: 0.1rem";>Details</button></a>
+                    <button id="Prdct no: {{ product.id }}" class="btn btn-warning btn-sm cart" style="margin-right: 0.1rem";>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div> 
+
+
+</div>
+
+
+
+
+
+{%endblock%}
+
+
+
+
+
+
+
+
+
+{%block js%}
+
+
+
+<script>
+console.log('working');
+
+
+if(localStorage.getItem('cart') == null){
+    var cart = {};
+  }
+else
+{
+cart = JSON.parse(localStorage.getItem('cart'));
+document.getElementById('cart').innerHTML = Object.keys(cart).length;
+
+}
+
+
+$('.cart').click(function(){
+console.log('clicked');
+var idstr = this.id.toString();
+console.log(idstr);
+if (cart[idstr] != undefined){
+  cart[idstr] = cart[idstr] +1;
+}
+else{
+  cart[idstr] = 1;
+
+}
+
+console.log(cart);
+
+localStorage.setItem('cart',JSON.stringify(cart))
+document.getElementById('cart').innerHTML = Object.keys(cart).length;
+});
+
+const exampleEl = document.getElementById('popcart')
+const popover = new bootstrap.Popover(exampleEl, options)
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}
+
+
+
+
+
+
+
+
+
+

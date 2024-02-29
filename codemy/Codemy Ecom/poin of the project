@@ -1,0 +1,387 @@
+
+
+=======>  Product Sales! - Django Wednesdays ECommerce 5        <====================
+
+
+# model.py
+
+def product(models.Model):
+
+    is_sale = models.BooleanField(default=False)
+    sale_price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
+
+
+
+
+
+
+
+
+
+# index.html
+
+
+
+<!-- Section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            {%for product in products%}
+
+            <!-- =============> sales! <=========== -->
+            {% if product.is_sale%}
+
+
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{product.image.url}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            In {{product.category}}
+                            <h5 class="fw-bolder">{{product.name|slice:':18'}}</h5>
+
+
+
+
+
+                            <!-- Product price-->
+
+                            <strike>
+                                ${{product.price}}
+                            </strike>
+
+                            &nbsp;<!-- this is space between two price-->
+                            ${{product.sale_price}}
+
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" style="margin-right:10px;" href="#">View </a>
+                            <a class="btn btn-outline-dark mt-auto" href="#">Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% else %}
+
+
+
+
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{product.image.url}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            In {{product.category}}
+                            <h5 class="fw-bolder">{{product.name|slice:':18'}}</h5>
+                            <!-- Product price-->
+                            ${{product.price}}
+
+
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" style="margin-right:10px;" href="#">View </a>
+                            <a class="btn btn-outline-dark mt-auto" href="#">Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {%endif%}
+            {%endfor%}
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=============> Product Category Pages - Django Wednesdays ECommerce 10        <====================
+
+# models.py  <======
+
+
+
+from django.db import models
+import datetime
+
+
+# Categories of Products
+
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'categories'
+
+
+
+
+
+
+# All of our Products
+
+class Product(models.Model):
+    name = models.CharField(max_length=500, default='')
+    date = models.DateField(default=datetime.datetime.today)
+    price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
+    description = models.CharField(max_length=10000, default='', blank=True, null=True)
+    image = models.ImageField(upload_to='uploads/product/')
+    is_sale = models.BooleanField(default=False)
+    sale_price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
+
+    def __str__(self):
+        return self.name 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# navbar.html   <====
+
+
+
+
+                <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}"> Admin</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="/">
+                                All Items
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        
+                        <li><a class="dropdown-item" href=" {% url 'category' 'Marketing-Books' %}">Marketing Books</a></li>
+                        
+
+                        <li><a class="dropdown-item" href=" {% url 'category' 'Programming-Books' %} ">Programming Books</a></li>
+                    </ul>
+                </li>
+
+
+
+
+
+
+> message section   <====
+
+
+    {% if messages %}
+
+    {%for message in messages %}
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {%endfor%}
+
+    {%endif%}
+
+
+
+
+
+# category.html  <====
+
+
+
+
+<!-- Section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            {%for product in products%}
+
+            <!-- =============> sales! <=========== -->
+            {% if product.is_sale%}
+
+
+            <div class="col mb-5">
+                <div class="card h-100">
+
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale!</div>
+                    <!-- Product image-->
+
+                    <img class="card-img-top" src="{{product.image.url}}" />
+
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            In {{product.category}}
+                            <h5 class="fw-bolder">{{product.name|slice:':18'}}</h5>
+
+
+
+
+
+                            <!-- Product price-->
+
+                            <strike>
+                                ${{product.price}}
+                            </strike>
+
+                            &nbsp;<!-- this is space between two price-->
+                            ${{product.sale_price}}
+
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" style="margin-right:10px;" href=" {% url 'product' product.id %} ">View </a>
+                            <a class="btn btn-outline-dark mt-auto" href="#">Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% else %}
+
+
+
+
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{product.image.url}}" />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            In {{product.category}}
+                            <h5 class="fw-bolder">{{product.name|slice:':18'}}</h5>
+                            <!-- Product price-->
+                            ${{product.price}}
+
+
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" style="margin-right:10px;" href="{% url 'product' product.id %}">View </a>
+                            <a class="btn btn-outline-dark mt-auto" href="#">Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            {%endif%}
+            {%endfor%}
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+# urls.py   <========
+
+
+
+
+from django.urls import path
+from . import views
+
+
+urlpatterns =[
+    path('',views.home,name='home'),
+    path('product/<int:pk>',views.product,name='product'),
+
+
+    path('category/<str:foo>',views.category,name='category'),
+    
+    
+    
+    
+]
+
+
+
+
+
+
+
+# views.py  <=========
+
+
+from django.shortcuts import render,redirect
+from .models import Product,Category
+from django.contrib import messages
+
+
+def category(request,foo):
+    
+    foo = foo.replace('-',' ')
+    
+    #grab the category from the url
+    try:
+        
+        category = Category.objects.get(name=foo)
+        products = Product.objects.filter(category=category)
+        return render(request,'category.html',{'products':products})
+        
+    except:
+        messages.success(request,('there category does not'))
+        return redirect('home')
+
+    
+    

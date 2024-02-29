@@ -1,0 +1,17 @@
+========================== >Adding Images & Changing Models In Django | Python Django Tutorials In Hindi #27 < ===================================
+
+
+
+
+admin panel a kisu Changing korthe hole "models.py" a giya change korthe hoy...
+
+ajke model kisu kaj kora oise ..  product er kisu method append kora oise. Images Adding korar method add kora oise.
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+{% extends 'base.html'%}
+
+
+
+
+{%block body%}
+
+
+
+
+
+
+
+<!-- Header-->
+<header class="bg-success py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder"> Log In</h1>
+            <br />
+
+            <!-- === typeit===    -->
+            <div class="lead fw-normal text-white-50 mb-0">
+                <p id="multipleStrings" style="font-family: cursive;">"Unveiling Our Narrative. Welcome to Our Log In Us Section!"</p>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+
+            <br />
+            <form method="POST" action="{% url 'login' %}">
+
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <center>
+                        <label for="exampleFormControlInput1" class="form-label" style="font-family: cursive;">Email address</label>
+                    </center>
+                    <input name="username" type="text" class="form-control" placeholder="name@example.com">
+
+                    <br />
+                    <center>
+                        <label for="inputPassword5" class="form-label" style="font-family: cursive;">Password</label>
+                    </center>
+                    <input name="password" placeholder="Enter your password." type="password" class="form-control" aria-describedby="passwordHelpBlock">
+                    <div class="form-text">
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                    </div>
+
+
+                </div>
+                <br />
+
+                <br />
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-outline-success" type="submit" style="font-family: cursive;">Log In</button>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- some <br/> for space -->
+<br />
+<br />
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+    {%endblock body%}
+
+
+
+
+
+
+
+
+

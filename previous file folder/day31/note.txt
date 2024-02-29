@@ -1,0 +1,35 @@
+========================== >Template Inheritance In Django | Python Django Tutorials In Hindi #31<==========================
+
+
+
+
+# ei video the shortcuts tharika bathaya hein mera harish bai ne...
+
+
+{%block <body,css,title etc>}  <contents> {%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

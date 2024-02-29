@@ -1,0 +1,55 @@
+{% extends "shop/basic.html" %}
+
+ {%block title%} {{product.product_name}}
+{%endblock%} {% block css %} body{ background-color:gray; } {%endblock%} 
+{%block body%}
+
+<br/>
+
+<div class="container">
+  <div
+    style="border:border: 2px dotted #3498db;"
+    class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary"
+  >
+  {% for pr in product %}
+    <div class="d-flex">
+      <div>
+        <br />
+        <div class="container">
+          <img style="width: auto; height: auto" src="{{pr.image.url}}" />
+        </div>
+        <div class="d-flex mt-5">
+          <h2 style="margin-right: 2rem; font-size: 2rem">
+            BDT. {{pr.price}}Tk
+          </h2>
+
+          <p class="lead mb-0">
+            <span id="divpr{{i.id}}" class="divpr">
+              <button
+                id="Prdct no: {{ pr.id }}"
+                class="btn btn-info cart"
+                style="margin-right: 0.1rem; cursor: pointer"
+                ;
+              >
+                Add to Cart
+              </button></span
+            >
+          </p>
+        </div>
+        <br />
+        <h3>{{pr.product_name}}</h3>
+        <br />
+      </div>
+      
+    </div>
+    <div>
+      <h3 style="font-family: Monaco">Descriptions :</h3>
+      <p class="lead my-2" style="font-size: 1.1rem; font-family: Monaco">
+        ' {{pr.desc}} '
+      </p>
+    </div>{% endfor %}
+
+  </div>
+</div>
+
+{%endblock%}

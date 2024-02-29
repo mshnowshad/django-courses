@@ -1,0 +1,16 @@
+========================== >Django Exercise 3: List the Products | Python Django Tutorials In Hindi #29 <==========================
+
+
+
+
+
+
+Django এক্সারসাইজ 3: পণ্য তালিকা
+
+
+> admin panel a jotho product add korbo thar list show korar exercise bola hoise...
+# finally i complate this exercise.
+
+
+
+

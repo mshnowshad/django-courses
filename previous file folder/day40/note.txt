@@ -1,0 +1,18 @@
+==========================>   Adding Cart PopOver & Other Pages Using Bootstrap | Python Django Tutorials In Hindi #40  <==========================
+
+#  cart button update kora oise... some update of django site.. next pe cart ka index complate hoga insha allah...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+{% extends "shop/basic.html" %} 
+
+
+{%block title%} Product List {%endblock%}
+
+
+
+{%block css%}
+
+body{
+  background-color:gray;
+}
+
+{%endblock%}
+
+
+
+{%block body%}
+
+<br>
+
+
+
+<center>
+  <h2 style='color:white'> Welcome to Our Product List Page !</h2>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+  
+
+    <h3 style="color:white">' Product list : </h3>
+        <ul>
+                {% for productt in product %}
+             
+            <h5>
+    <li style="border-style: hidden;"> {{ productt.product_name }} =>    BD. {{ product.price }}  </li>
+                {% endfor %}
+            
+        </ul>
+
+
+
+
+</div>
+
+
+
+
+{%endblock%}
+
+
+   
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+\

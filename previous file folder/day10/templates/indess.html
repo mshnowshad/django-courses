@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>templat is working</title>
+</head>
+<body>
+    <h1>Wellcome to my indess page .</h1><br> <h2>Enter the punctuations :  </h2> 
+
+
+
+<!--============================================> this is 'form' <============================================-->
+
+
+    <!-- 
+        আপনি যখন ফর্ম জমা দেন, তখন টেক্সট বক্সের বিষয়বস্তু এবং চেকবক্সের অবস্থা URL-এর সাথে যুক্ত করা হয় এবং '/analyze' পৃষ্ঠায় পাঠানো হয়।
+        '/analyze' পৃষ্ঠায় কোডটি তখন এই তথ্যটি পাঠ্য বিশ্লেষণ করতে ব্যবহার করবে।
+    -->
+<form action='/analyze' method='get'>   <!-- ## ei jaygay 'about' name er page o niye jabe 'form' er txt lhike 'button' a submit korle
+    
+                                                   > action='/analyze': এটি বলে যে ফর্মটি জমা দেওয়া হলে, তথ্যটি '/analyze' নামক ওয়েবসাইটের একটি পৃষ্ঠায় পাঠানো হবে। এই পৃষ্ঠায় পাঠ্য বিশ্লেষণের কোড থাকবে।                     
+                                                          >    method='get': এটি নির্ধারণ করে যে তথ্যগুলি URL-এর মাধ্যমে পাঠানো হবে।    -->
+    
+    
+    <textarea name='text' style='margin: 0px; width: 721px;height: 93;'></textarea> <br>   <!-- এই লাইনটি একটি বড় টেক্সট বক্স তৈরি করে যেখানে ব্যবহারকারীরা তাদের পাঠ্য লিখতে পারবে।-->
+
+
+    <input type='checkbox' name='removepunc'> Removepunc <!-- ei jaygay akta 'checkbox' name er akta gor banani oise 
+                                                             > type='checkbox': এটি নির্ধারণ করে যে এটি একটি চেকবক্স হবে।       
+                                                                    > name='removepunc': এই বৈশিষ্ট্যটি ফর্ম ডেটাতে চেকবক্সের অবস্থা সনাক্ত করতে ব্যবহৃত হয়
+    
+                                                                 --> 
+    <br>
+    <button type='submit'> Done analyazer </button>   <!-- <button type='submit'> Done analyazer </button>: এই লাইনটি একটি বোতাম তৈরি করে যা ব্যবহারকারী ফর্ম জমা দিতে ক্লিক করতে পারেন।-->
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

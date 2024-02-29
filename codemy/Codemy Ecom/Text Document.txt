@@ -1,0 +1,9 @@
+Create Our ECommerce Models - Django Wednesdays ECommerce #2       date=24.02.2024
+
+Add Product Images To Homepage - Django Wednesdays ECommerce #4    date = 24.02.2024
+
+
+
+Product Pages - Django Wednesdays ECommerce #9     date = 27.02.2024
+
+Update Shopping Cart Button - Django Wednesdays ECommerce #14    date = 28.02.2024

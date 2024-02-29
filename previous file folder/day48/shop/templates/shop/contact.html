@@ -1,0 +1,77 @@
+{% extends "shop/basic.html" %} 
+
+
+{%block title%} Contract of E-com {%endblock%}
+
+
+{%block css%}
+body{
+  background-color:gray;
+}
+
+
+
+{%endblock%}
+
+
+
+
+
+
+{%block body%}
+
+
+
+<br>
+
+
+
+<center>
+ 
+  <h2 style="color:white;">Contract Us any queary!</h2>
+
+</center>
+
+
+<br>
+
+
+<div class="container">
+<form action="/shop/contact" method="post"> {% csrf_token %}
+  <div class="form-group">
+    <label for="name" class="form-label" style="color: whitesmoke;"> Name</label>
+    <input type="text" class="form-control" id="name" name='name' placeholder="Enter the name :"required>
+
+    <div class="form-group">
+    <label for="email" class="form-label" style="color: whitesmoke;"> Email</label>
+    <input type="email" class="form-control" id="email" name='email' placeholder="Enter the email :"required>
+
+    <div class="form-group">
+    <label for="phone" class="form-label" style="color: whitesmoke;"->Phone number</label>
+    <input type="phone" class="form-control" id="phone" name='phone'  placeholder="Enter the Phone number :" required>
+
+    <div class="mb-3">
+      <label for="desc" class="form-label" style="color: whitesmoke; margin-top: .9rem;">Descriptions of questions !. </label>
+      <textarea class="form-control" id="desc" name="desc" rows="5"placeholder="Enter the something else..." required></textarea>
+    </div>
+
+    
+  <br>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{%endblock%}
+

@@ -1,0 +1,46 @@
+
+
+================== added search operations...=====================
+#views.py
+
+from django.db.models import Q
+
+def indexshop(request):
+   
+    products = Product.objects.all()
+    search_query = ""
+    
+    if request.method == "POST": 
+        # Check if the form was submitted and contains the 'search' button
+
+
+        if "search" in request.POST:
+           
+            search_query = request.POST.get("query")
+           
+            products = Product.objects.filter(
+                Q(product_name__icontains=search_query) |
+                Q(price__icontains=search_query) |
+                Q(image__icontains=search_query)
+            )
+    
+    # Render the template with the products and search query
+    return render(request,'<htmlfile_name>',{'products': products,"search_query": search_query})
+
+
+
+# <htmlfile>
+
+ <form method="post">
+      {% csrf_token %}
+      <input type="search" name="query" class="form-control" placeholder="search..." value="{{search_query}}">
+      <button class="btn btn-success btn-sm px-3 mx-2" name="search">Search</button>
+  </form>
+
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+{% extends "shop/basic.html" %} 
+
+
+{%block title%} {{product.product_name}} {%endblock%}
+
+
+{% block css %} 
+body{
+  background-color: rgb(140, 115, 115);
+
+
+
+}
+
+
+
+.card {
+    width: auto;
+    display: flex;
+    height: auto;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+  {%endblock%}
+
+{%block navber%} 
+
+<button class="btn btn-primary btn-sm" type="button" disabled>
+  <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+  <span role="status">products id...</span>
+</button>
+
+
+
+
+
+
+
+{%endblock%}
+
+
+
+
+{%block body%}
+
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Welcome to the E-commarce Product List place!</strong> see Product List Us , Good day to You!.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<br>
+
+
+
+
+<div class="container">
+ 
+
+
+
+<div style='background-color:rgb(57,45,45);' class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+  
+    <div class="d-flex">
+     <div>
+      <h3> " {{product.product_name}} "</h3> 
+      <br>
+      <center>
+      <img src="{{product.image.url}}">
+      </center>
+      <div class="d-flex mt-5 "><h2 style="margin-right: 2rem">BDT. {{product.price}}Tk</h2>
+      <p class="lead mb-0"><button id="Prdct no: {{ product.id }}" class="btn btn-info cart" style="margin-right: 0.1rem; cursor: pointer";>Add to Cart</button></p></div>
+      <br>
+      <br>
+     </div>
+    </div>
+     <div>
+        <h3 style=" font-family:Monaco;">Descriptions : </h3>
+      <p class="lead my-2" style="font-family:Monaco;">{{product.desc}}</p>
+    
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+{%endblock%}
+
+
+   
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+

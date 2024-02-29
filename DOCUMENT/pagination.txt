@@ -1,0 +1,83 @@
+
+========>  Django and HTMX #15 - Click to Load pattern (pagination)  <===========
+
+
+#settings.py
+
+INSTALLED_APPS = [
+   
+    'django_htmx',
+]
+
+
+MIDDLEWARE = [
+ 
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "django_htmx.middleware.HtmxMiddleware",
+]
+
+
+
+#view.py
+
+from django.core.paginator import Paginator
+
+
+
+def index(request):
+    product = Product.objects.all()
+    paginator = Paginator(product, 4)
+    page_number = request.GET.get('page',1)
+    page_obj = paginator.get_page(page_number)
+    if request.htmx:
+        return render(request, 'index.html',{'page_obj':page_obj})
+    return render(request,'index.html',{'page_obj':page_obj})
+
+
+
+
+
+#html file 
+
+
+
+  <div class="row">
+    {% if page_obj %}
+    {% for i in page_obj %}
+        <div class="col-md-3"  style="display:flex;">
+            <div class="card" style="width:18rem">
+              <img src="{{ i.image.url }}" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">{{ i.category }}</h5> 
+                    <p class="card-text">{{i.name|slice:"0:30" }}..</p>
+                    <p class="card-text"style="font-size:1.4rem;">BD. {{ i.price }}</p>
+                    
+                    <a href=" {% url "showprod" i.pk %} " class="card-link"><button type="button" class="btn btn-info btn-sm " style="margin-right: 0.1rem";>Details</button></a>
+                    
+                   
+                      <button class="btn btn-warning btn-sm cart" style="margin-right: 0.1rem";>Add to Cart</button>
+           
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+
+ <!-- Pagination links -->
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+              <li class="page-item"><a class="page-link" href="?page=1">&laquo; First</a></li>
+              <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+            {% endif %}
+            <li class="page-item active"><span class="page-link">{{ page_obj.number }}</span></li>
+            {% if page_obj.has_next %}
+              <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+              <li class="page-item"><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    {% endif %}
+  </div>

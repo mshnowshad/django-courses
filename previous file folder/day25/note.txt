@@ -1,0 +1,21 @@
+========================== > Django Admin & Adding Data To The Database | Python Django Tutorials In Hindi #25
+< ===================================
+
+
+
+
+python manage.py createsuperuser
+
+#>> email = depp8660@gmail.com
+>>> pasw = 12345
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,344 @@
+
+{% extends "shop/basic.html" %} 
+
+
+{%block title%} E-com.in {%endblock%}
+
+{%block css%} 
+
+
+ <style>
+      body{
+        background-color: white;
+        
+      }
+      .col-md-3 {
+          display: inline-block;
+          margin-left: -4px;
+      }
+
+      .col-md-3 img{
+          width: 100%;
+          height: auto;
+      }
+
+      body .carousel-control-indicator li {
+          background-color: blue;
+      }
+
+      body .carousel-control-prev-icon,
+      body .carousel-control-next-icon{
+
+        background-color: blue;
+
+      }
+
+
+      
+
+      body .no-padding {
+          padding-left: 0;
+          padding-right: 0;
+      }
+
+     
+      
+
+      /*.carousel-indicators .active{
+      background-color: blue;
+      }*/
+
+
+
+
+
+  </style>
+{%endblock%}
+
+
+
+{%block body%}
+
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Welcome to the E-commarce Home of E-com place!</strong> see Home of E-com Us , Good day to You!.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<br>
+
+
+
+<center>
+  <h2> Welcome to Our Home of E-com Page !</h2>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+<!-- ================================================= causoul ==============================================================-->
+
+
+<div id="demo" class="carousel-slide" data-ride="carousel">
+
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1" ></li>
+    <li data-target="#demo" data-slide-to="2" ></li>
+
+  </ul>
+
+
+
+  <!--==================================== slideshow starts here============== -->
+
+          <div class="container carousel-inner no-padding">
+            <div class="carousel-item active">
+              {% load static %}
+           
+
+
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+                </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+
+
+
+
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                    </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+    
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                      <div class="card" style="width: 18rem;">
+                        <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                        </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+        
+
+            
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                          <div class="card" style="width: 18rem;">
+                            <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                            </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+            
+            </div><!-- class="carousel-item active"   er end tag eita -->
+
+
+
+
+
+          <!-- others 1 -->
+
+
+          <div class="carousel-item active">
+           
+
+
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+                </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+
+
+
+
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                    </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+    
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                      <div class="card" style="width: 18rem;">
+                        <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                        </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+        
+
+            
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                          <div class="card" style="width: 18rem;">
+                            <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                            </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+            
+            </div><!-- class="carousel-item active"   er end tag eita -->
+
+
+
+
+
+          <!-- others 2 -->
+
+
+
+          <div class="carousel-item active">
+           
+
+
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <div class="card" style="width: 18rem;">
+                <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+                </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+
+
+
+
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                  <div class="card" style="width: 18rem;">
+                    <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                    </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+    
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                      <div class="card" style="width: 18rem;">
+                        <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                      </div>
+                        </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+        
+
+            
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                          <div class="card" style="width: 18rem;">
+                            <img src="{% static "shop/simple.webp" %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                            </div>    <!-- class="col-xs-3 col-sm-3 col-md-3" end tage eita -->
+            
+            </div><!-- class="carousel-item active"   er end tag eita -->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+        </div>  <!-- container er end tag -->
+
+
+    
+  
+   </div><!-- id="demo" class="carousel-slide" data-ride="carousel"   ka  "end tag" -->
+   
+   
+    
+    
+
+<!--===================================== previous and right icon=========================== -->
+
+
+
+   <a class="carousel-control-prev" href="#demo" data-slide="prev">
+     <span class="carousel-control-prev-icon"></span>
+   </a>
+
+
+
+
+   <a class="carousel-control-next" href="#demo" data-slide="next">
+     <span class="carousel-control-next-icon"></span>
+   </a>
+
+
+
+
+
+
+
+
+
+{%endblock%}
+
+
+

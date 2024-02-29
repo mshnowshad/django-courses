@@ -1,0 +1,12 @@
+==========================E-commerce Website: Project Layout | Python Django Tutorials In Hindi #23
+===================================
+
+
+
+python manage.py startapp 'foldername'
+
+
+python manage.py runserver
+
+
+

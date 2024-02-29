@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+
+    <title>GREAT ADIB!</title>
+
+    <style>
+    
+.card {
+  margin-bottom: 10px;
+}
+  
+    </style>
+  </head>
+  <body style="background-color:#BDC3C7;">
+
+
+
+<br>
+<div class="container">
+     <!-- About Section Begin -->
+     <section class="about spad">
+        <div class="container">
+            <div class="about__text">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb__text">
+                            {% comment %} <h2>{{product.name}}</h2> {% endcomment %}
+                            <div class="breadcrumb__option" >
+                                <a href="{% url "index" %}" >Back</a>
+                                <span>{{product.category}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about__pic__item__large">
+                            <img src="{{product.image.url}}" alt="">
+                        </div>
+                        {% comment %} <div class="about__pic">
+                            <div class="about__pic__item">
+                                <img src="{{product.image.url}}" alt="">
+                            </div>
+                            <div class="about__pic__item">
+                                <img src="{{product.image.url}}" alt="">
+                            </div>
+                        </div> {% endcomment %}
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about__right__text">
+                            <h2>{{product.name}}</h2>
+                            <p>In the heart of culinary delight, the air is infused with the tantalizing aromas of diverse flavors that beckon any true food enthusiast.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et dolore
+                                magna aliqua accusantium doloremque laudantium.</p>
+                            <ul>
+                                <li>Class aptent taciti sociosqu ad litora torquent per conubia nostra</li>
+                                <li>Inceptos himenaeos mauris.Integer gravida tincidunt accumsan.</li>
+                               
+                                <li>In vitae tempor velit of the impenetrable foliage.</li>
+                            </ul>
+                            
+                            <p>
+                                A symphony of sizzling sounds emerges from bustling kitchens, where skilled chefs transform simple ingredients into masterpieces.
+                                 Whether indulging in the creamy richness of a truffle-infused risotto or savoring the spicy kick of street food, every bite is an adventure. 
+                              </p>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+       <!-- Optional JavaScript -->
+    <!-- Keep the same JavaScript imports as they are -->
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+
+
+    <script src="{% static "main.js" %}"></script>
+
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+
+
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

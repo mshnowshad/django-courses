@@ -1,0 +1,92 @@
+## Customize Django Admin Panel With AdminLTE
+
+
+$ pip install django-adminlte3  
+
+
+''' settings.py '''
+import os
+
+
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = os.path.join(BASE_DIR / '< app name >'/ 'static')
+
+
+
+
+$  python manage.py collectstatic
+
+
+''' urls.py '''
+
+
+from django.contrib import admin
+from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
+from django.views.generic import RedirectView
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('logout/',RedirectView.as_view(url = '/admin/logout/')),
+
+    path('',include('home.urls')),
+    # path('djadmin/',include('customadmin.urls')),
+    
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+
+
+
+
+
+#=======================> another using jazzmin <===============================
+
+
+
+$ pip install -U django-jazzmin
+
+INSTALLED_APPS = [
+    'jazzmin',
+
+    'django.contrib.admin',
+    [...]
+]
+
+
+
+
+JAZZMIN_SETTINGS = {
+	"site_title": "Library Admin",
+	"site_brand": "Library",
+   	"site_logo": "books/img/logo.png",
+}
+
+
+
+
+========> admin panel customized of product list <===========
+# admin.py
+
+
+from django.contrib import admin
+from .models import *
+
+
+class ProductAdmin(admin.ModelAdmin):  #ADMIN PANEL CUSTOMIZED OF PRODUCTLIST
+    list_display = ('id','name','price','published','created')
+    list_display_links = ('id','name')  #eita diye product edit kora jay
+    list_filter = ('price','created')
+    list_editable = ('published',)
+    search_fields = ('name','price')
+    
+admin.site.register(Product,ProductAdmin)
+
+
+
+
+
+
+

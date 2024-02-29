@@ -1,0 +1,12 @@
+==========================E-commerce Website: Creating Apps (Apps Vs Projects) | Python Django Tutorials In Hindi #21===================================
+
+
+
+python manage.py startapp 'foldername'
+
+
+python manage.py runserver
+
+
+
+

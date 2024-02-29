@@ -1,0 +1,9 @@
+    
+=============> create template in the django website # 8  <=================
+
+
+
+
+
+
+> this is template used for  "HTML" because  html file output show korar jonno
