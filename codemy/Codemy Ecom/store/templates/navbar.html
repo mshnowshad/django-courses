@@ -40,16 +40,16 @@
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
-                            <a class="dropdown-item" href="/">
-                                All Items
+                            <a class="dropdown-item" href="{% url 'category_summary'%}">
+                                All Categories
                             </a>
                         </li>
                         <li><hr class="dropdown-divider" /></li>
-                        
-                        <li><a class="dropdown-item" href=" {% url 'category' 'Marketing-Books' %}">Marketing Books</a></li>
-                        
+                        {% for category in categories %}
+                        <li><a class="dropdown-item" href=" {% url 'category' category %}">{{ category.name }}</a></li>
+                        {% endfor %}
 
-                        <li><a class="dropdown-item" href=" {% url 'category' 'Programming-Books' %} ">Programming Books</a></li>
+
                     </ul>
                 </li>
             </ul>

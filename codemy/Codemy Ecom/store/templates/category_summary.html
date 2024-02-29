@@ -1,0 +1,109 @@
+{%extends 'base.html'%}
+
+
+
+{%block body%}
+
+
+
+
+
+
+<!-- Header-->
+<header class="bg-success py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">All Catgories</h1>
+
+            <!-- === typeit===    -->
+            <div class="lead fw-normal text-white-50 mb-0">
+                <p id="multipleStrings">"Unveiling Our Narrative. Welcome to Catgories Section!"</p>
+
+            </div>
+        </div>
+    </div>
+</header>
+<br />
+
+
+
+
+<div class="container">
+    <div class="row">
+        {% for category in categories %}
+        <center>
+            <div class="d-grid gap-2 col-6 mx-auto" style="margin-bottom:1.2rem;">
+                <a href="{%url 'category' category %}" class="btn btn-success" type="button">{{category.name}}</a>
+            </div>
+        </center>
+        {% endfor %}
+    </div>
+</div>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- some <br/> for space -->
+<br />
+<br />
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{%endblock body%}
+
+
+
+
+
+
+
+

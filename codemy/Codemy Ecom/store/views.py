@@ -14,27 +14,47 @@ from .forms import SignUpForm
 
 def home(request):
     category = Category.objects.all()
+    categories = Category.objects.all()
     products = Product.objects.all()
+    
 
-    return render(request, 'home.html',{'products':products,'category':category})
+    return render(request, 'home.html',{'products':products,'category':category,'categories':categories})
 
 
 
 def about(request):
+    categories = Category.objects.all()
 
-    return render(request, 'about.html',{})
+    return render(request, 'about.html',{'categories':categories})
+
+
+
+def navbar(request):
+    categories = Category.objects.all()
+    return render(request,'navbar.html',{'categories':categories})
+    
+    
 
 
 
 def product(request,pk):
     product = Product.objects.get(id=pk)
+    categories = Category.objects.all()
+    
 
-    return render(request, 'product.html',{'product':product})
+    return render(request, 'product.html',{'product':product,'categories':categories})
 
+
+
+def category_summary(request):
+    categories = Category.objects.all()
+    return render(request,'category_summary.html',{'categories':categories})
+    
+    
 
 
 def category(request,foo):
-    
+    categories = Category.objects.all()
     foo = foo.replace('-',' ')
     
     #grab the category from the url
@@ -42,7 +62,7 @@ def category(request,foo):
         
         category = Category.objects.get(name=foo)
         products = Product.objects.filter(category=category)
-        return render(request,'category.html',{'products':products})
+        return render(request,'category.html',{'products':products,'category':category,'categories':categories})
         
     except:
         messages.success(request,('there category does not'))
@@ -60,6 +80,7 @@ def category(request,foo):
 #     return render(request, 'about.html',{})
 
 def login_user(request):
+    
     
      #এটি প্রথমে রিকুয়েস্ট পদ্ধতি ("POST") চেক করে। যদি পদ্ধতি "POST" হয়, তাহলে এটি ফর্ম থেকে সাবমিট করা ডাটা অ্যাক্সেস করে।
     if request.method == "POST":
