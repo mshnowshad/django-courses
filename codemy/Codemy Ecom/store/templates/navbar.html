@@ -1,15 +1,11 @@
 <!-- this is the Navications bar -->
-
-
 <!-- Navigation-->
-
-
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="/">MiNiShoP</a>
-        
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -25,10 +21,50 @@
                 <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
 
                 {%if user.is_authenticated %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'update_user' %}">Profile</a></li>
 
-                <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                <li class="nav-item dropdown" onmouseover="showDropdown()" onmouseout="hideDropdown()">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" aria-expanded="false">
+                        Profile
+                    </a>
+                    <ul class="dropdown-menu" id="dropdownMenu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{% url 'update_user' %}">
+                                Your Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'update_info' %}">
+                                Profile info
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'logout' %}">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
+
+
+
+                <!--<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Profile
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="{% url 'update_user'%}">
+                                Your Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{% url 'logout' %}">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>-->
                 {% else %}
                 <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Register</a></li>
@@ -38,8 +74,13 @@
 
                 <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}"> Admin</a></li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
+
+
+
+
+
+                <li class="nav-item dropdown"  >
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
                             <a class="dropdown-item" href="{% url 'category_summary'%}">
@@ -67,3 +108,14 @@
     </div>
 </nav>
 
+
+<!-- dropdown profile -->
+<script>
+    function showDropdown() {
+        document.getElementById("dropdownMenu").classList.add("show");
+    }
+
+    function hideDropdown() {
+        document.getElementById("dropdownMenu").classList.remove("show");
+    }
+</script>

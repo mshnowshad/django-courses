@@ -15,7 +15,7 @@
 <header class="bg-success py-5">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">UPDATE YOUR PROFILE</h1>
+            <h1 class="display-4 fw-bolder">INFO</h1>
             <br />
 
             <!-- === typeit===    -->
@@ -27,7 +27,7 @@
     </div>
 </header>
 
-<br />
+
 
 
 
@@ -36,23 +36,21 @@
         <div class="col-md-6 offset-md-3">
 
             <br />
-            <form method="POST" action="{% url 'update_user' %}">
+            <form method="POST" action="{% url 'update_info' %}">
 
                 {% csrf_token %}
 
-                {{ user_form.as_p}}
+                {{ form.as_p}}
 
                 <div class="d-grid gap-2 col-6 mx-auto">
 
                     <button class="btn btn-outline-success" type="submit" style="margin-top: 2rem; font-family: cursive;">Update Profile</button>
-                    <a class="btn btn-warning" style="margin-top:2rem;" type="button" href="{%url 'update_info'%}">Update Info</a>
-                    <a class="btn btn-warning" style="margin-top:2rem;" type="button" href="{%url 'update_password'%}">Update Password</a>
-
+                    
                 </div>
 
             </form>
             <br />
-            
+
         </div>
     </div>
 </div>
@@ -66,9 +64,11 @@
 
 
 
-<br />
-<br />
+<!-- some <br/> for space -->
+<div style="margin-bottom:8rem;">
 
+
+</div>
 
 {%endblock body%}
 

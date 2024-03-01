@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import *
 
+#Extend User Profiles - Django Wednesdays ECommerce 24
+from django.contrib.auth.models import User
+
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'price', 'category', 'date')
@@ -29,7 +32,32 @@ class OrderAdmin(admin.ModelAdmin):
     search_fields = ('customer__first_name', 'customer__last_name', 'phone', 'product__name')  # Corrected to tuple format with customer__first_name and customer__last_name
 
 
+
+
+    
+    
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Order, OrderAdmin)
+
+
+#Extend User Profiles - Django Wednesdays ECommerce 24
+admin.site.register(Profile)
+
+class ProfileInline(admin.StackedInline):
+    model = Profile
+
+
+class UserAdmin(admin.ModelAdmin):
+    model = User
+    field = ['username','first_name','last_name','email']
+    inlines = [ProfileInline]
+    
+
+
+admin.site.unregister(User)
+
+admin.site.register(User,UserAdmin)
+

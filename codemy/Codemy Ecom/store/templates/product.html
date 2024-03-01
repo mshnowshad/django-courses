@@ -35,8 +35,8 @@
             <div class="row g-0">
                 <div class="col-md-4">
 
-                    <img src="{{ product.image.url }}" class="img-fluid rounded-start">
-                    <div style="margin-top:2rem;margin-left:3rem;">
+                    <img src="{{ product.image.url }}" class="img-fluid rounded-start" style="margin-top:2.2rem;">
+                    <div style="margin-top:2.4rem;margin-left:3.4rem;">
                         <a href="{% url 'home' %}"><button class="btn btn-outline-success" style="margin-left: 2rem; ">Back Home</button></a>
                         <button id="add-cart" value="{{product.id}}" type="button" style="margin-left:5px;" class="btn btn-outline-dark">Add to Card</button>
                     </div>
@@ -52,7 +52,7 @@
                 <p class="card-text justified" align="justify">{{ product.description }}..</p>
 
                 {% if product.is_sale %}
-                <div class="badge bg-warning text-dark position-absolute" style="top: 0.5rem; left: 0.5rem"><h7>Sale Now!</h7></div>
+                <div class="badge bg-warning text-dark position-absolute" style="top: 0.5rem; left: 0.5rem"><h7>Flash Sale Now!</h7></div>
 
                 <h4>
 

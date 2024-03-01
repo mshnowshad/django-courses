@@ -1,42 +1,43 @@
 ﻿
 
 
-# from turtle import RawTurtle
+
 from django.shortcuts import render,redirect
-from .models import Product,Category
+from .models import Product,Category,Profile
 from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
-from .forms import SignUpForm,UpdateUserForm
+from .forms import SignUpForm,UpdateUserForm,ChangePasswordForm,UserInfoForm
 
 
 
-def update_user(request):
-    if request.user.is_authenticated:
-        current_user = User.objects.get(id=request.user.id)
-        user_form = UpdateUserForm(request.POST or None , instance=current_user)
 
-        if user_form.is_valid():
-            user_form.save()
 
-            login(request,current_user)
-            messages.success(request,"User Has Been updated!")
-            return redirect('home')
-        return render(request,'update_user.html',{'user_form':user_form})
-    else:
+
+def update_info(request):
+     if request.user.is_authenticated:
+        current_user = Profile.objects.get(user__id=request.user.id)
+        form = UserInfoForm(request.POST or None , instance=current_user)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request,"Your Info Has Been updated!")
+            return redirect('update_user')
+        return render(request,'update_info.html',{'form':form})
+     else:
+        
         messages.success(request,'Your must be logged in or access the log in form!')
         return redirect('home')
 
-
-
-
-
-
-
+    # return render(request, 'update_info.html',{})
+   
     
 
+        
+
+    
 
 def home(request):
     category = Category.objects.all()
@@ -83,6 +84,8 @@ def category(request,foo):
     categories = Category.objects.all()
     foo = foo.replace('-',' ')
     
+    
+    
     #grab the category from the url
     try:
         
@@ -93,6 +96,15 @@ def category(request,foo):
     except:
         messages.success(request,('there category does not'))
         return redirect('home')
+    
+
+
+
+
+
+ 
+    
+    
 
     
     
@@ -175,8 +187,8 @@ def register_user(request):
             login(request,user)
             
             #এটি একটি সফল মেসেজ প্রদর্শন করে এবং হোম পেজে ফিরিয়ে দেয়।
-            messages.success(request,('You have Registered success full.!'))
-            return redirect('home')
+            messages.success(request,('You have Registered success full.! Please fill your Info!'))
+            return redirect('update_info')
         
 
         #যদি ফর্মের তথ্য বৈধ না হয়, তাহলে এটি একটি ত্রুটি মেসেজ প্রদর্শন করে এবং রেজিস্ট্রেশন পেজে ফিরিয়ে দেয়।
@@ -193,6 +205,51 @@ def register_user(request):
 
 
 
+
+def update_user(request):
+    if request.user.is_authenticated:
+        current_user = User.objects.get(id=request.user.id)
+        user_form = UpdateUserForm(request.POST or None , instance=current_user)
+
+        if user_form.is_valid():
+            user_form.save()
+
+            login(request,current_user)
+            messages.success(request,"User Has Been updated!")
+            return redirect('home')
+        return render(request,'update_user.html',{'user_form':user_form})
+    else:
+        messages.success(request,'Your must be logged in or access the log in form!')
+        return redirect('home')
+
+
+
+
+
+def update_password(request):
+    if request.user.is_authenticated:
+        current_user = request.user
+        
+        if request.method == 'POST':
+            form = ChangePasswordForm(current_user,request.POST)
+            #is the form valid
+            if form.is_valid():
+                form.save()
+                messages.success(request,'Your Password is updated Successfully!')
+                login(request,current_user)
+                return redirect('update_user')
+            else:
+                for error in list(form.errors.values()):
+                    messages.error(request,error)
+                    return redirect('update_password')
+                
+
+        else:
+            form = ChangePasswordForm(current_user)
+            return render(request, 'update_password.html',{'form':form})
+    else:
+        messages.success(request,'You must be logged in to view the page')
+        return redirect('home')
 
 
     

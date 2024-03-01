@@ -1,7 +1,55 @@
+
+
 from django.db import models
 import datetime
 
 
+
+#Extend User Profiles - Django Wednesdays ECommerce 24   <<<<<<<<<<<<<<<<
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+
+#customer profile
+class Profile(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    date_modified = models.DateTimeField(User,auto_now=True)
+    country = models.CharField(max_length=500,blank=True)
+    phone = models.CharField(max_length=20,blank=True)
+    address = models.CharField(max_length=500,blank=True)
+    address2 = models.CharField(max_length=500,blank=True)
+    city = models.CharField(max_length=500,blank=True)
+    zipcode = models.CharField(max_length=500,blank=True)
+    
+    def __str__(self):
+        return self.user.username
+    
+    
+
+#create a user profile by default when user 'signs up'
+def create_profile(sender,instance,created,**kwargs):
+    if created:
+        user_profile = Profile(user=instance)
+        user_profile.save()
+        
+# automate the profile thing 
+post_save.connect(create_profile,sender=User)
+    
+    
+
+
+class Customer(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    address = models.CharField(max_length=200,default="")
+    phone = models.CharField(max_length=15)
+    email = models.EmailField(max_length=100)
+    password = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}'
+    
+ # Extend User Profiles - Django Wednesdays ECommerce 24  <<<<<<< end <<<<<<<<<<
+    
 
 
 # Categories of Products
@@ -14,17 +62,6 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'categories'
 
-# Customers
-class Customer(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    address = models.CharField(max_length=200,default="")
-    phone = models.CharField(max_length=15)
-    email = models.EmailField(max_length=100)
-    password = models.CharField(max_length=100)
-
-    def __str__(self):
-        return f'{self.first_name} {self.last_name}'
 
 
 
