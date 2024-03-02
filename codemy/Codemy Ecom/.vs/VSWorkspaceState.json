@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\cart\\templates",
+    "\\cart",
     "\\store",
     "\\store\\templates"
   ],
-  "SelectedNode": "\\store\\views.py",
+  "SelectedNode": "\\cart\\cart.py",
   "PreviewInSolutionExplorer": false
 }

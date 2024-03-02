@@ -1,8 +1,10 @@
-from store.models import Product
+from store.models import Product,Profile
 
 class Cart:
     def __init__(self, request):
         self.session = request.session
+        #get request
+        self.request = request
         cart = self.session.get('session_key')
         if 'session_key' not in request.session:
             cart = self.session['session_key'] = {}
@@ -19,8 +21,17 @@ class Cart:
         else:
             self.cart[product_id] = product_qty
         self.session.modified = True
-        
 
+
+        # Cart Persistence on Logout  - Django Wednesdays ECommerce 27
+        if self.request.user.is_authenticated :
+            # get the current user profile
+            current_user = Profile.objects.filter(user__id=self.request.user.id)
+            #convert
+            carty = str(self.cart)
+            carty = carty.replace("\'","\"")
+            #save carty to the Profile Model
+            current_user.update(old_cart=str(carty))
 
 
     def __len__(self):
