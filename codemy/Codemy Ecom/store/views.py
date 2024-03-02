@@ -2,6 +2,7 @@
 
 
 
+from operator import methodcaller
 from django.shortcuts import render,redirect
 from .models import Product,Category,Profile
 from django.contrib.auth import authenticate,login,logout
@@ -13,26 +14,33 @@ from .forms import SignUpForm,UpdateUserForm,ChangePasswordForm,UserInfoForm
 
 
 
+#Search Products - Django Wednesdays ECommerce 26
+from django.db.models import Q
 
-
-
-def update_info(request):
-     if request.user.is_authenticated:
-        current_user = Profile.objects.get(user__id=request.user.id)
-        form = UserInfoForm(request.POST or None , instance=current_user)
-
-        if form.is_valid():
-            form.save()
-            messages.success(request,"Your Info Has Been updated!")
-            return redirect('update_user')
-        return render(request,'update_info.html',{'form':form})
-     else:
+def search(request):
+    categories = Category.objects.all()
+    if request.method == 'POST':
+        searched = request.POST['searched']
+        #query the products model
+        searched = Product.objects.filter(
+                Q(name__icontains=searched) | 
+                Q(description__icontains=searched) | 
+                Q(category__name__icontains=searched)
+            )
         
-        messages.success(request,'Your must be logged in or access the log in form!')
-        return redirect('home')
+      
+        if not searched:
+            messages.success(request,"Your searched product is doesn't exists ")
+            return redirect('home')
+            
+        
+        else:
+            return render(request, 'search.html',{'searched':searched,'categories':categories})
+        
+    else:
+        
+        return render(request, 'search.html',{'categories':categories})
 
-    # return render(request, 'update_info.html',{})
-   
     
 
         
@@ -253,6 +261,28 @@ def update_password(request):
 
 
     
+   
+
+
+
+
+
+def update_info(request):
+     if request.user.is_authenticated:
+        current_user = Profile.objects.get(user__id=request.user.id)
+        form = UserInfoForm(request.POST or None , instance=current_user)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request,"Your Info Has Been updated!")
+            return redirect('update_user')
+        return render(request,'update_info.html',{'form':form})
+     else:
+        
+        messages.success(request,'Your must be logged in or access the log in form!')
+        return redirect('home')
+
+    # return render(request, 'update_info.html',{})
    
     
 

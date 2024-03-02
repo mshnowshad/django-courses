@@ -6,6 +6,17 @@ from django import forms  #forms মডিউল, যা ফর্ম তৈর�
 
 
 
+#Search Products - Django Wednesdays ECommerce 26
+
+
+
+
+
+    
+
+	
+	
+	
 #User Profile Page - Django Wednesdays ECommerce 25
 
 from .models import Profile
@@ -24,13 +35,6 @@ class UserInfoForm(forms.ModelForm):
         fields = ('phone', 'address', 'address2', 'city', 'zipcode', 'country')
 
 		
-
-
-    
-
-	
-	
-	
 
 
 

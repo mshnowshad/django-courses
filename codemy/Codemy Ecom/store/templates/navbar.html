@@ -19,6 +19,8 @@
 
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}"> Admin</a></li>
+
 
                 {%if user.is_authenticated %}
 
@@ -49,22 +51,22 @@
 
 
                 <!--<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Profile
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Profile
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                    <a class="dropdown-item" href="{% url 'update_user'%}">
+                        Your Profile
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="{% url 'update_user'%}">
-                                Your Profile
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="{% url 'logout' %}">
-                                Logout
-                            </a>
-                        </li>
-                    </ul>
-                </li>-->
+                </li>
+                <li>
+                    <a class="dropdown-item" href="{% url 'logout' %}">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </li>-->
                 {% else %}
                 <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Register</a></li>
@@ -72,14 +74,13 @@
 
                 {% endif %}
 
-                <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}"> Admin</a></li>
 
 
 
 
 
 
-                <li class="nav-item dropdown"  >
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="3" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li>
@@ -95,8 +96,18 @@
 
                     </ul>
                 </li>
+
+                <li class="nav-item"><a class="nav-link" href="{% url 'search' %}">Search</a></li>
+
             </ul>
-            <form class="d-flex">
+            <form class="d-flex" action="{% url 'search' %}" method="POST">
+                {% csrf_token %}
+                <input class="form-control me-2" type="text" placeholder="Search"  name="searched">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+
+            <form class="d-flex" style="margin-left:1rem;">
                 <a href="{% url 'cart_summary'%}" class="btn btn-outline-dark">
                     <i class="bi-cart-fill me-1"></i>
                     Cart
@@ -104,6 +115,7 @@
                 </a>
 
             </form>
+
         </div>
     </div>
 </nav>

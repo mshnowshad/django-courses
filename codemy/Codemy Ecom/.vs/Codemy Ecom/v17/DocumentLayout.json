@@ -7,32 +7,20 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\forms.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\forms.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\search.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\templates\\search.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\cart\\templates\\cartsummary.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cart\\templates\\cartsummary.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\category_summary.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\templates\\category_summary.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\category.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\templates\\category.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\update_user.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\templates\\update_user.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\update_info.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\templates\\update_info.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\navbar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\templates\\navbar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\poin of the project||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:poin of the project||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,60 +30,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "cartsummary.html",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\cart\\templates\\cartsummary.html",
-              "RelativeDocumentMoniker": "cart\\templates\\cartsummary.html",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\cart\\templates\\cartsummary.html",
-              "RelativeToolTip": "cart\\templates\\cartsummary.html",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAAAH8AAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-03-01T15:56:01.152Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "category_summary.html",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\category_summary.html",
-              "RelativeDocumentMoniker": "store\\templates\\category_summary.html",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\category_summary.html",
-              "RelativeToolTip": "store\\templates\\category_summary.html",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAD4AAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-03-01T15:51:34.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "update_user.html",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\update_user.html",
-              "RelativeDocumentMoniker": "store\\templates\\update_user.html",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\update_user.html",
-              "RelativeToolTip": "store\\templates\\update_user.html",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAC8AAACCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-03-01T15:46:36.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "update_info.html",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\update_info.html",
-              "RelativeDocumentMoniker": "store\\templates\\update_info.html",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\update_info.html",
-              "RelativeToolTip": "store\\templates\\update_info.html",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAEMAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-03-01T15:33:17.174Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -104,47 +40,63 @@
               "RelativeDocumentMoniker": "store\\views.py",
               "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\views.py",
               "RelativeToolTip": "store\\views.py",
-              "ViewState": "AQIAALEAAAAAAAAAAAAAALwAAABHAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAYwDEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-01T15:20:22.072Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "models.py",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\models.py",
-              "RelativeDocumentMoniker": "store\\models.py",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\models.py",
-              "RelativeToolTip": "store\\models.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-01T14:08:51.769Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "forms.py",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\forms.py",
-              "RelativeDocumentMoniker": "store\\forms.py",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\forms.py",
-              "RelativeToolTip": "store\\forms.py",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAFEAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-01T14:07:39.123Z",
+              "WhenOpened": "2024-03-02T04:25:23.178Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "category.html",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\category.html",
-              "RelativeDocumentMoniker": "store\\templates\\category.html",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\category.html",
-              "RelativeToolTip": "store\\templates\\category.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH8AAAAcAAAA",
+              "Title": "poin of the project",
+              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\poin of the project",
+              "RelativeDocumentMoniker": "poin of the project",
+              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\poin of the project",
+              "RelativeToolTip": "poin of the project",
+              "ViewState": "AQIAABcCAAAAAAAAAAAAACICAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-02T05:54:38.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "models.py",
+              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\models.py",
+              "RelativeDocumentMoniker": "store\\models.py",
+              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\models.py",
+              "RelativeToolTip": "store\\models.py",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-02T05:33:13.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "navbar.html",
+              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\navbar.html",
+              "RelativeDocumentMoniker": "store\\templates\\navbar.html",
+              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\navbar.html",
+              "RelativeToolTip": "store\\templates\\navbar.html",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAAAF0AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-03-01T13:38:16.038Z"
+              "WhenOpened": "2024-03-02T05:20:51.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "search.html",
+              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\search.html",
+              "RelativeDocumentMoniker": "store\\templates\\search.html",
+              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\search.html",
+              "RelativeToolTip": "store\\templates\\search.html",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAAAIoAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-02T05:18:18.878Z",
+              "EditorCaption": ""
             }
           ]
         }
