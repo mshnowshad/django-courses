@@ -7,3 +7,6 @@ Add Product Images To Homepage - Django Wednesdays ECommerce #4    date = 24.02.
 Product Pages - Django Wednesdays ECommerce #9     date = 27.02.2024
 
 Update Shopping Cart Button - Django Wednesdays ECommerce #14    date = 28.02.2024
+
+
+Login Cart Persistence - Django Wednesdays ECommerce 28     date = 02.03.2024

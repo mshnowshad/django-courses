@@ -1,84 +1,74 @@
-from store.models import Product,Profile
+from store.models import Product, Profile
 
 class Cart:
     def __init__(self, request):
         self.session = request.session
-        #get request
         self.request = request
-        cart = self.session.get('session_key')
-        if 'session_key' not in request.session:
-            cart = self.session['session_key'] = {}
-        self.cart = cart
-
-
+        # Initialize cart from session, or an empty dictionary if not present
+        self.cart = self.session.get('cart', {})
 
     def add(self, product, quantity):
         product_id = str(product.id)
-        product_qty = int(quantity)
+        # Update quantity if product already exists in cart, otherwise add it
         if product_id in self.cart:
-            # If product already exists in cart, update quantity
-            self.cart[product_id] += product_qty
+            self.cart[product_id] += quantity
         else:
-            self.cart[product_id] = product_qty
+            self.cart[product_id] = quantity
+        # Save cart to session and mark session as modified
+        self.session['cart'] = self.cart
         self.session.modified = True
+        # Update user's old_cart attribute if user is authenticated
+        if self.request.user.is_authenticated:
+            current_user = Profile.objects.get(user=self.request.user)
+            current_user.old_cart = self.cart
+            current_user.save()
 
-
-        # Cart Persistence on Logout  - Django Wednesdays ECommerce 27
-        if self.request.user.is_authenticated :
-            # get the current user profile
-            current_user = Profile.objects.filter(user__id=self.request.user.id)
-            #convert
-            carty = str(self.cart)
-            carty = carty.replace("\'","\"")
-            #save carty to the Profile Model
-            current_user.update(old_cart=str(carty))
-
+    def cart_total(self):
+        # Retrieve products from cart
+        product_ids = self.cart.keys()
+        products = Product.objects.filter(id__in=product_ids)
+        total = 0
+        # Calculate total price
+        for product in products:
+            total += product.get_price() * self.cart[str(product.id)]
+        return total
 
     def __len__(self):
+        # Return the number of items in the cart
         return len(self.cart)
 
     def get_prods(self):
+        # Retrieve products from cart
         product_ids = self.cart.keys()
         products = Product.objects.filter(id__in=product_ids)
         return products
 
     def get_quants(self):
-        
+        # Return the dictionary containing product IDs and their quantities
         return self.cart
-    
-    
-
 
     def update(self, product, quantity):
-        product_id = str(product)
-        product_qty = int(quantity)
-        ourcart = self.cart
-        ourcart[product_id] = product_qty
-        
+        # Update quantity of a product in the cart
+        product_id = str(product.id)
+        self.cart[product_id] = quantity
+        # Mark session as modified
         self.session.modified = True
-        
-        thing = self.cart
-        return thing
-
-
+        # Update user's old_cart attribute if user is authenticated
+        if self.request.user.is_authenticated:
+            current_user = Profile.objects.get(user=self.request.user)
+            current_user.old_cart = self.cart
+            current_user.save()
+        return self.cart
 
     def delete(self, product):
-        product_id = str(product)
+        # Remove a product from the cart
+        product_id = str(product.id)
         if product_id in self.cart:
             del self.cart[product_id]
+        # Mark session as modified
         self.session.modified = True
-
-    def cart_total(self):
-        product_ids = self.cart.keys()
-        products = Product.objects.filter(id__in=product_ids)
-        quantities = self.cart
-        total = 0
-        for key, value in quantities.items():
-            key = int(key)
-            for product in products:
-                if product.id == key:
-                    if product.is_sale:
-                        total += product.sale_price * value
-                    else:
-                        total += product.price * value
-        return total
+        # Update user's old_cart attribute if user is authenticated
+        if self.request.user.is_authenticated:
+            current_user = Profile.objects.get(user=self.request.user)
+            current_user.old_cart = self.cart
+            current_user.save()

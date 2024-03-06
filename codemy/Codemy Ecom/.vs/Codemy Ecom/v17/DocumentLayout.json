@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\cart\\cart.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cart\\cart.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\product.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\templates\\product.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:store\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "cart.py",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\cart\\cart.py",
-              "RelativeDocumentMoniker": "cart\\cart.py",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\cart\\cart.py",
-              "RelativeToolTip": "cart\\cart.py",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-02T06:27:22.656Z",
+              "DocumentIndex": 1,
+              "Title": "product.html",
+              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\product.html",
+              "RelativeDocumentMoniker": "store\\templates\\product.html",
+              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\templates\\product.html",
+              "RelativeToolTip": "store\\templates\\product.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-04T06:56:00.487Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "views.py",
+              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\views.py",
+              "RelativeDocumentMoniker": "store\\views.py",
+              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\views.py",
+              "RelativeToolTip": "store\\views.py",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAEoAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-04T06:51:48.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "models.py",
+              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\models.py",
+              "RelativeDocumentMoniker": "store\\models.py",
+              "ToolTip": "F:\\programming\\Courses\\django-course\\codemy\\Codemy Ecom\\store\\models.py",
+              "RelativeToolTip": "store\\models.py",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-04T06:18:41.463Z"
             }
           ]
         }

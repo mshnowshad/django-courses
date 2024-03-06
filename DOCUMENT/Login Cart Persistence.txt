@@ -1,0 +1,540 @@
+
+=========================>  " Login Cart Persistence "  <=========================
+
+
+# create an app name is 'cart'
+
+
+##>>  create a 'cart.py' , 'context_processors.py'
+
+
+
+
+
+
+#urls.py <+++++++++====================
+
+
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('store.urls')),
+    path('cart/', include('cart.urls')),
+    
+]
+
+
+
+
+#>> go to 'the settings.py' set this in the teplates "  'cart.context_processors.cart', "
+
+#settings.py  <=========================
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',  # <<<<< this <<<<<<<<<<<<<<<<<<<
+
+            ],
+        },
+    },
+]
+
+
+
+
+
+
+
+
+
+#>> create a 'forms.py'
+
+#forms.py  <===============================
+
+
+
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm, SetPasswordForm
+from django import forms
+from .models import Profile
+
+
+class UserInfoForm(forms.ModelForm):
+	phone = forms.CharField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Phone'}), required=False)
+	address1 = forms.CharField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Address 1'}), required=False)
+	address2 = forms.CharField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Address 2'}), required=False)
+	city = forms.CharField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'City'}), required=False)
+	state = forms.CharField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'State'}), required=False)
+	zipcode = forms.CharField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Zipcode'}), required=False)
+	country = forms.CharField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Country'}), required=False)
+
+	class Meta:
+		model = Profile
+		fields = ('phone', 'address1', 'address2', 'city', 'state', 'zipcode', 'country', )
+
+
+
+class ChangePasswordForm(SetPasswordForm):
+	class Meta:
+		model = User
+		fields = ['new_password1', 'new_password2']
+
+	def __init__(self, *args, **kwargs):
+		super(ChangePasswordForm, self).__init__(*args, **kwargs)
+
+		self.fields['new_password1'].widget.attrs['class'] = 'form-control'
+		self.fields['new_password1'].widget.attrs['placeholder'] = 'Password'
+		self.fields['new_password1'].label = ''
+		self.fields['new_password1'].help_text = '<ul class="form-text text-muted small"><li>Your password can\'t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can\'t be a commonly used password.</li><li>Your password can\'t be entirely numeric.</li></ul>'
+
+		self.fields['new_password2'].widget.attrs['class'] = 'form-control'
+		self.fields['new_password2'].widget.attrs['placeholder'] = 'Confirm Password'
+		self.fields['new_password2'].label = ''
+		self.fields['new_password2'].help_text = '<span class="form-text text-muted"><small>Enter the same password as before, for verification.</small></span>'
+
+class UpdateUserForm(UserChangeForm):
+	# Hide Password stuff
+	password = None
+	# Get other fields
+	email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}), required=False)
+	first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'First Name'}), required=False)
+	last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Last Name'}), required=False)
+
+	class Meta:
+		model = User
+		fields = ('username', 'first_name', 'last_name', 'email')
+
+	def __init__(self, *args, **kwargs):
+		super(UpdateUserForm, self).__init__(*args, **kwargs)
+
+		self.fields['username'].widget.attrs['class'] = 'form-control'
+		self.fields['username'].widget.attrs['placeholder'] = 'User Name'
+		self.fields['username'].label = ''
+		self.fields['username'].help_text = '<span class="form-text text-muted"><small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small></span>'
+
+		
+class SignUpForm(UserCreationForm):
+	email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}))
+	first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'First Name'}))
+	last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Last Name'}))
+
+	class Meta:
+		model = User
+		fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
+
+	def __init__(self, *args, **kwargs):
+		super(SignUpForm, self).__init__(*args, **kwargs)
+
+		self.fields['username'].widget.attrs['class'] = 'form-control'
+		self.fields['username'].widget.attrs['placeholder'] = 'User Name'
+		self.fields['username'].label = ''
+		self.fields['username'].help_text = '<span class="form-text text-muted"><small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small></span>'
+
+		self.fields['password1'].widget.attrs['class'] = 'form-control'
+		self.fields['password1'].widget.attrs['placeholder'] = 'Password'
+		self.fields['password1'].label = ''
+		self.fields['password1'].help_text = '<ul class="form-text text-muted small"><li>Your password can\'t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can\'t be a commonly used password.</li><li>Your password can\'t be entirely numeric.</li></ul>'
+
+		self.fields['password2'].widget.attrs['class'] = 'form-control'
+		self.fields['password2'].widget.attrs['placeholder'] = 'Confirm Password'
+		self.fields['password2'].label = ''
+		self.fields['password2'].help_text = '<span class="form-text text-muted"><small>Enter the same password as before, for verification.</small></span>'
+
+
+
+
+
+
+
+
+
+# models.py <======================================
+
+
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+
+
+# Create Customer Profile
+class Profile(models.Model):
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
+	date_modified = models.DateTimeField(User, auto_now=True)
+	phone = models.CharField(max_length=20, blank=True)
+	address1 = models.CharField(max_length=200, blank=True)
+	address2 = models.CharField(max_length=200, blank=True)
+	city = models.CharField(max_length=200, blank=True)
+	state = models.CharField(max_length=200, blank=True)
+	zipcode = models.CharField(max_length=200, blank=True)
+	country = models.CharField(max_length=200, blank=True)
+	old_cart = models.CharField(max_length=200, blank=True, null=True)
+
+	def __str__(self):
+		return self.user.username
+
+# Create a user Profile by default when user signs up
+def create_profile(sender, instance, created, **kwargs):
+	if created:
+		user_profile = Profile(user=instance)
+		user_profile.save()
+
+# Automate the profile thing
+post_save.connect(create_profile, sender=User)
+
+
+
+class Customer(models.Model):
+	first_name = models.CharField(max_length=50)
+	last_name = models.CharField(max_length=50)
+	phone = models.CharField(max_length=10)
+	email = models.EmailField(max_length=100)
+	password = models.CharField(max_length=100)
+
+
+	def __str__(self):
+		return f'{self.first_name} {self.last_name}'
+
+
+
+
+
+
+# admin.py <==========================
+
+from django.contrib import admin
+from .models import Category, Customer, Product, Order, Profile
+from django.contrib.auth.models import User
+
+admin.site.register(Category)
+admin.site.register(Customer)
+admin.site.register(Product)
+admin.site.register(Order)
+admin.site.register(Profile)
+
+
+# Mix profile info and user info
+class ProfileInline(admin.StackedInline):
+	model = Profile
+
+# Extend User Model
+class UserAdmin(admin.ModelAdmin):
+	model = User
+	field = ["username", "first_name", "last_name", "email"]
+	inlines = [ProfileInline]
+
+# Unregister the old way
+admin.site.unregister(User)
+
+# Re-Register the new way
+admin.site.register(User, UserAdmin)
+
+
+
+
+
+
+
+
+
+# urls.py <=================================
+
+
+from django.urls import path
+from .views import *
+
+urlpatterns = [
+    path('', home, name='home'),
+    
+    path('login/', login_user, name='login'),
+    path('logout/', logout_user, name='logout'),
+    path('register/', register_user, name='register'),
+    path('update_password/',update_password, name='update_password'),
+    path('update_user/', update_user, name='update_user'),
+    path('update_info/',update_info, name='update_info'),
+   
+]
+
+
+
+
+
+# views.py <=================================
+
+
+from django.shortcuts import render, redirect
+from .models import Product, Category, Profile
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from .forms import SignUpForm, UpdateUserForm, ChangePasswordForm, UserInfoForm
+from django import forms
+from django.db.models import Q
+import json
+from cart.cart import Cart
+
+
+
+
+
+
+
+
+
+def login_user(request):
+	if request.method == "POST":
+		username = request.POST['username']
+		password = request.POST['password']
+		user = authenticate(request, username=username, password=password)
+		if user is not None:
+			login(request, user)
+
+			# Do some shopping cart stuff
+			current_user = Profile.objects.get(user__id=request.user.id)
+			# Get their saved cart from database
+			saved_cart = current_user.old_cart
+			# Convert database string to python dictionary
+			if saved_cart:
+				# Convert to dictionary using JSON
+				converted_cart = json.loads(saved_cart)
+				# Add the loaded cart dictionary to our session
+				# Get the cart
+				cart = Cart(request)
+				# Loop thru the cart and add the items from the database
+				for key,value in converted_cart.items():
+					cart.db_add(product=key, quantity=value)
+
+			messages.success(request, ("You Have Been Logged In!"))
+			return redirect('home')
+		else:
+			messages.success(request, ("There was an error, please try again..."))
+			return redirect('login')
+
+	else:
+		return render(request, 'login.html', {})
+
+
+
+
+### logout
+
+def logout_user(request):
+	logout(request)
+	messages.success(request, ("You have been logged out...Thanks for stopping by..."))
+	return redirect('home')
+
+
+
+
+
+
+
+
+
+
+def register_user(request):
+	form = SignUpForm()
+	if request.method == "POST":
+		form = SignUpForm(request.POST)
+		if form.is_valid():
+			form.save()
+			username = form.cleaned_data['username']
+			password = form.cleaned_data['password1']
+			# log in user
+			user = authenticate(username=username, password=password)
+			login(request, user)
+			messages.success(request, ("Username Created - Please Fill Out Your User Info Below..."))
+			return redirect('update_info')
+		else:
+			messages.success(request, ("Whoops! There was a problem Registering, please try again..."))
+			return redirect('register')
+	else:
+		return render(request, 'register.html', {'form':form})
+
+
+
+
+
+
+
+
+
+		
+def update_user(request):
+	if request.user.is_authenticated:
+		current_user = User.objects.get(id=request.user.id)
+		user_form = UpdateUserForm(request.POST or None, instance=current_user)
+
+		if user_form.is_valid():
+			user_form.save()
+
+			login(request, current_user)
+			messages.success(request, "User Has Been Updated!!")
+			return redirect('home')
+		return render(request, "update_user.html", {'user_form':user_form})
+	else:
+		messages.success(request, "You Must Be Logged In To Access That Page!!")
+		return redirect('home')
+
+
+
+
+
+
+
+def update_password(request):
+	if request.user.is_authenticated:
+		current_user = request.user
+		# Did they fill out the form
+		if request.method  == 'POST':
+			form = ChangePasswordForm(current_user, request.POST)
+			# Is the form valid
+			if form.is_valid():
+				form.save()
+				messages.success(request, "Your Password Has Been Updated...")
+				login(request, current_user)
+				return redirect('update_user')
+			else:
+				for error in list(form.errors.values()):
+					messages.error(request, error)
+					return redirect('update_password')
+		else:
+			form = ChangePasswordForm(current_user)
+			return render(request, "update_password.html", {'form':form})
+	else:
+		messages.success(request, "You Must Be Logged In To View That Page...")
+		return redirect('home')
+
+
+
+
+
+
+
+def update_info(request):
+	if request.user.is_authenticated:
+		current_user = Profile.objects.get(user__id=request.user.id)
+		form = UserInfoForm(request.POST or None, instance=current_user)
+
+		if form.is_valid():
+			form.save()
+			messages.success(request, "Your Info Has Been Updated!!")
+			return redirect('home')
+		return render(request, "update_info.html", {'form':form})
+	else:
+		messages.success(request, "You Must Be Logged In To Access That Page!!")
+		return redirect('home')
+
+
+
+
+
+
+
+# login.html   <====================================
+
+<form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+    
+  <div class="mb-3">
+    
+    <input type="text" class="form-control" name="username" placeholder="Enter Your Username">
+    
+  </div>
+  <div class="mb-3">
+    
+    <input type="password" class="form-control" name="password" placeholder="Enter Your Password">
+  </div>
+  <br/><br/>
+  <button type="submit" class="btn btn-secondary">Login</button>
+
+
+
+
+
+
+
+# register.html  <=====================
+
+<form method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    <br/><br/>
+    <button type="submit" class="btn btn-secondary">
+      Register
+    </button>
+  
+</form>
+
+
+
+
+
+
+
+# update_info.html  <==========================
+
+<form method="POST" action="{% url 'update_info' %}">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    <br/><br/>
+    <button type="submit" class="btn btn-secondary">
+      Update Profile
+    </button>
+</form>
+
+
+
+
+
+
+
+# update_password.html <===========================
+
+<form method="POST" action="{% url 'update_password' %}">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    <br/><br/>
+    <button type="submit" class="btn btn-secondary">
+      Update Password
+    </button>
+  
+</form>
+
+
+
+
+
+
+
+
+# update_user.html  <========================
+
+
+<form method="POST" action="{% url 'update_user' %}">
+    {% csrf_token %}
+    
+    {{ user_form.as_p }}
+    <br/><br/>
+    <button type="submit" class="btn btn-secondary">
+      Update Profile
+    </button>
+</form>
+
+<br/><br/>
+<a href="{% url 'update_password' %}" class="btn btn-secondary">Update Password</a>
+

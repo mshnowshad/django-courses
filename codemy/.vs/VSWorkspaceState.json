@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Codemy Ecom",
-    "\\Codemy Ecom\\cart",
-    "\\Codemy Ecom\\cart\\templates",
-    "\\Codemy Ecom\\store",
-    "\\Codemy Ecom\\store\\templates",
-    "\\Django demo\\cart"
+    "\\Django demo",
+    "\\Django demo\\cart",
+    "\\Django demo\\cart\\templates",
+    "\\Django demo\\store\\templates"
   ],
-  "SelectedNode": "\\Codemy Ecom\\cart\\views.py",
+  "SelectedNode": "\\Django demo\\cart\\cart.py",
   "PreviewInSolutionExplorer": false
 }

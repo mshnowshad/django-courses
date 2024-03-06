@@ -43,21 +43,22 @@ admin.site.register(Customer, CustomerAdmin)
 admin.site.register(Order, OrderAdmin)
 
 
-#Extend User Profiles - Django Wednesdays ECommerce 24
 admin.site.register(Profile)
 
+
+# Mix profile info and user info
 class ProfileInline(admin.StackedInline):
-    model = Profile
+	model = Profile
 
-
+# Extend User Model
 class UserAdmin(admin.ModelAdmin):
-    model = User
-    field = ['username','first_name','last_name','email']
-    inlines = [ProfileInline]
-    
+	model = User
+	field = ["username", "first_name", "last_name", "email"]
+	inlines = [ProfileInline]
 
-
+# Unregister the old way
 admin.site.unregister(User)
 
-admin.site.register(User,UserAdmin)
+# Re-Register the new way
+admin.site.register(User, UserAdmin)
 

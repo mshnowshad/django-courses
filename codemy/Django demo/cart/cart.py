@@ -16,6 +16,7 @@ class Cart():
 		# Make sure cart is available on all pages of site
 		self.cart = cart
 
+#Login Cart Persistence - Django Wednesdays ECommerce 28
 	def db_add(self, product, quantity):
 		product_id = str(product)
 		product_qty = str(quantity)

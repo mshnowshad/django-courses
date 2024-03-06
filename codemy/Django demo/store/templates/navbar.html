@@ -16,12 +16,13 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{% url 'update_user' %}">User Profile</a></li>
                 <li><hr class="dropdown-divider" /></li>
-<li><a class="dropdown-item" href="{% url 'update_info'  %}">User Info</a></li>
-                            </ul>
+                <li><a class="dropdown-item" href="{% url 'update_info'  %}">User Info</a></li>
+                <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+            </ul>
                         </li>
 
 
-               <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+               
             {% else %}
                <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
 
@@ -38,8 +39,10 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{% url 'category_summary' %}">All Products</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-<li><a class="dropdown-item" href="{% url 'category' 'Programming-Books' %}">Programming Books</a></li>
-                                <li><a class="dropdown-item" href="{% url 'category' 'Marketing-Books' %}">Marketing Books</a></li>
+                                {%for category in categories%}
+<li><a class="dropdown-item" href="{% url 'category' category %}">{{category.name}}</a></li>
+                                {%endfor%}
+                                
                             </ul>
                         </li>
                     </ul>

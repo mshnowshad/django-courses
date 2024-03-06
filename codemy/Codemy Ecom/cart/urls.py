@@ -13,19 +13,4 @@ urlpatterns =[
     
     # path('',views.cart_summary,name='cart_summary'),
     # path('',views.cart_summary,name='cart_summary'),
-    # path('',views.cart_summary,name='cart_summary'),
-    # path('',views.cart_summary,name='cart_summary'),
-    # path('',views.cart_summary,name='cart_summary'),
-    # path('',views.cart_summary,name='cart_summary'),
-    # path('',views.cart_summary,name='cart_summary'),
-    # path('',views.cart_summary,name='cart_summary'),
-    # path('',views.cart_summary,name='cart_summary'),
-    # path('',views.cart_summary,name='cart_summary'),
-    # path('',views.cart_summary,name='cart_summary'),
-    
-
-    
-    
-    
-    
 ]

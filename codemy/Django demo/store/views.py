@@ -65,6 +65,11 @@ def update_password(request):
 	else:
 		messages.success(request, "You Must Be Logged In To View That Page...")
 		return redirect('home')
+
+
+
+
+		
 def update_user(request):
 	if request.user.is_authenticated:
 		current_user = User.objects.get(id=request.user.id)
@@ -106,9 +111,14 @@ def product(request,pk):
 
 
 def home(request):
+	catgories = Category.objects.all()
 	products = Product.objects.all()
-	return render(request, 'home.html', {'products':products})
+	return render(request, 'home.html', {'products':products,'catgories':catgories})
 
+
+def navbar(request):
+	catgories = Category.objects.all()
+	return render(request, 'navbar.html', {'catgories':catgories})	
 
 def about(request):
 	return render(request, 'about.html', {})	

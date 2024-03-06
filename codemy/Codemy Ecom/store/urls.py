@@ -1,25 +1,23 @@
 from django.urls import path
-from . import views
+from .views import *
 
 
 
 
 urlpatterns =[
-    path('',views.home,name='home'),
-    path('navbar/',views.navbar,name='navbar'),
-    path('about/',views.about,name='about'),
-    path('login/',views.login_user,name='login'),
-    path('logout/',views.logout_user,name='logout'),
-    path('register/',views.register_user,name='register'),
-    path('update_user/',views.update_user,name='update_user'),
-    path('update_info/',views.update_info,name='update_info'),
-    
-    path('update_password/',views.update_password,name='update_password'),
-    path('product/<int:pk>',views.product,name='product'),
-    path('category/<str:foo>',views.category,name='category'),
-    path('category_summary/',views.category_summary,name='category_summary'),
-    
-    path('search',views.search,name='search'),
+    path('',home,name='home'),
+    path('navbar/',navbar,name='navbar'),
+    path('about/',about,name='about'),
+    path('login/', login_user, name='login'),
+    path('logout/', logout_user, name='logout'),
+    path('register/', register_user, name='register'),
+    path('update_password/',update_password, name='update_password'),
+    path('update_user/', update_user, name='update_user'),
+    path('update_info/',update_info, name='update_info'),
+    path('product/<int:pk>',product,name='product'),
+    path('category/<str:foo>',category,name='category'),
+    path('category_summary/',category_summary,name='category_summary'),
+    path('search/',search,name='search'),
     
     
     
