@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "F:\\programming\\Courses\\django-course\\Desphixs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\products.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ecommerce\\core\\templates\\products.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\navbar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ecommerce\\core\\templates\\navbar.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\404.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ecommerce\\core\\templates\\404.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ecommerce\\core\\templates\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ecommerce\\core\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\detail.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ecommerce\\core\\templates\\detail.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ecommerce\\core\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ecommerce\\core\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "products.html",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\products.html",
-              "RelativeDocumentMoniker": "Ecommerce\\core\\templates\\products.html",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\products.html",
-              "RelativeToolTip": "Ecommerce\\core\\templates\\products.html",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAHoAAABIAAAA",
+              "DocumentIndex": 2,
+              "Title": "detail.html",
+              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\detail.html",
+              "RelativeDocumentMoniker": "Ecommerce\\core\\templates\\detail.html",
+              "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\detail.html",
+              "RelativeToolTip": "Ecommerce\\core\\templates\\detail.html",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-03-06T13:27:35.078Z",
+              "WhenOpened": "2024-03-09T16:28:27.829Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "navbar.html",
               "DocumentMoniker": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\navbar.html",
               "RelativeDocumentMoniker": "Ecommerce\\core\\templates\\navbar.html",
               "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\navbar.html",
               "RelativeToolTip": "Ecommerce\\core\\templates\\navbar.html",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACYAAAAxAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACMAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-03-06T13:26:16.544Z",
+              "WhenOpened": "2024-03-09T16:25:17.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "home.html",
+              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\home.html",
+              "RelativeDocumentMoniker": "Ecommerce\\core\\templates\\home.html",
+              "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\home.html",
+              "RelativeToolTip": "Ecommerce\\core\\templates\\home.html",
+              "ViewState": "AQIAANMAAAAAAAAAAAAAAOUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-03-09T16:22:16.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "urls.py",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\urls.py",
-              "RelativeDocumentMoniker": "Ecommerce\\core\\urls.py",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\urls.py",
-              "RelativeToolTip": "Ecommerce\\core\\urls.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-06T13:25:51.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "404.html",
-              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\404.html",
-              "RelativeDocumentMoniker": "Ecommerce\\core\\templates\\404.html",
-              "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\404.html",
-              "RelativeToolTip": "Ecommerce\\core\\templates\\404.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-03-06T13:22:20.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "views.py",
               "DocumentMoniker": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\views.py",
               "RelativeDocumentMoniker": "Ecommerce\\core\\views.py",
               "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\views.py",
               "RelativeToolTip": "Ecommerce\\core\\views.py",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACIAAAAAAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAiwBUAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-06T13:04:15.002Z",
+              "WhenOpened": "2024-03-09T16:21:40.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "urls.py",
+              "DocumentMoniker": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\urls.py",
+              "RelativeDocumentMoniker": "Ecommerce\\core\\urls.py",
+              "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\urls.py",
+              "RelativeToolTip": "Ecommerce\\core\\urls.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-09T15:48:32.895Z",
               "EditorCaption": ""
             }
           ]

@@ -1,0 +1,21 @@
+{% extends "link.html" %}
+{%load static %}
+
+
+{% block content %}
+<div style="margin-bottom:10rem;"></div>
+<div class="container">
+
+
+    <form method="POST" action="{% url 'update_info' %}">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <br /><br />
+        <button type="submit" class="btn btn-secondary">
+            Update Profile
+        </button>
+    </form>
+    <div style="margin-bottom:10rem;"></div>
+</div>
+{%endblock content%}
