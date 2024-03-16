@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "Ecommerce\\core\\templates\\detail.html",
               "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\detail.html",
               "RelativeToolTip": "Ecommerce\\core\\templates\\detail.html",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAAA8AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-03-09T16:28:27.829Z",
               "EditorCaption": ""
@@ -53,7 +53,7 @@
               "RelativeDocumentMoniker": "Ecommerce\\core\\templates\\navbar.html",
               "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\navbar.html",
               "RelativeToolTip": "Ecommerce\\core\\templates\\navbar.html",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACMAAAA4AAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADsAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-03-09T16:25:17.171Z",
               "EditorCaption": ""
@@ -66,7 +66,7 @@
               "RelativeDocumentMoniker": "Ecommerce\\core\\templates\\home.html",
               "ToolTip": "F:\\programming\\Courses\\django-course\\Desphixs\\Ecommerce\\core\\templates\\home.html",
               "RelativeToolTip": "Ecommerce\\core\\templates\\home.html",
-              "ViewState": "AQIAANMAAAAAAAAAAAAAAOUAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-03-09T16:22:16.109Z",
               "EditorCaption": ""
@@ -81,8 +81,7 @@
               "RelativeToolTip": "Ecommerce\\core\\views.py",
               "ViewState": "AQIAAAsAAAAAAAAAAAAiwBUAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-09T16:21:40.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T16:21:40.399Z"
             },
             {
               "$type": "Document",
@@ -94,8 +93,7 @@
               "RelativeToolTip": "Ecommerce\\core\\urls.py",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-09T15:48:32.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T15:48:32.895Z"
             }
           ]
         }

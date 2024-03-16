@@ -1,0 +1,86 @@
+#first open bash in pythonanywhere.com
+
+$$ git clone <href of your git project link>
+
+# 2nd .make a virtualenv 
+
+$$ mkvirtualenv --python=/usr/bin/python3.10 mysite-virtualenv
+
+
+
+#create a webapp
+
+1.Manual configuration
+
+2.python3.10
+
+
+### django install
+
+$$ pip install django
+
+
+### open " WSGI configuration file " set up only django
+
+
+# +++++++++++ DJANGO +++++++++++
+# To use your own django app use code like this:
+import os
+import sys
+#
+
+path = '/home/mshnowshad/ <file name of github repo >' 
+if path not in sys.path:
+    sys.path.append(path)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = '<settings folder name>.settings'
+
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
+
+
+#### open your settings of django project and set up host " ALLOWED_HOSTS = ['mshnowshad.pythonanywhere.com']  " <---------'THIS IS THE CONFIGUATION YOUR WEBNAME'---------
+
+
+### setup your ' Working directory:'
+
+this ---> " /home/mshnowshad/django5  "
+
+
+### setup your virtual ' Source code:'
+
+like --> " /home/mshnowshad/.virtualenvs/mysite-virtualenv  "
+
+
+
+### setup your static folder 'Static files:'
+
+url : /static/     
+
+directory : </home/mshnowshad/django5/static> folder directory but this is number of 2nd way of static setup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
